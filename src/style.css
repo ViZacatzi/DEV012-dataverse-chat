@@ -1,0 +1,182 @@
+
+/* Estilos para el cuerpo de la página */
+body {
+    background-color: rgb(34, 34, 34); /* Establece el color de fondo del cuerpo en un tono oscuro (gris oscuro). */
+    background-image: linear-gradient(rgba(63, 65, 70, 0.75), rgba(63, 65, 70, 0.75)), url(img/fondo.jpeg);
+    /* Establece una imagen de fondo con un degradado superpuesto. 
+       El degradado (linear-gradient) crea una capa semitransparente encima de la imagen.
+       La imagen de fondo se encuentra en la ruta "img/fondo.jpeg". */
+    height: 250px; /* Establece la altura del cuerpo en 250 píxeles. Ajusta según sea necesario. */
+}
+
+/* Estilos generales para los elementos div */
+div {
+    border-style: double; /* Establece el estilo del borde a "double", que crea un borde doble. */
+    border-width: 0; /* Establece el ancho del borde en 0, eliminando efectivamente el borde. */
+    margin: 0; /* Establece el margen exterior del div en 0, eliminando cualquier espacio adicional. */
+    text-align: justify; /* Justifica el texto dentro del div, lo que puede afectar la distribución del espacio. */
+    align-items: center; /* Centra los elementos secundarios a lo largo del eje transversal del div.
+      Esto funciona cuando estás utilizando el modelo de diseño flexbox. */
+}
+
+
+/* Estilos para el título */
+h1 {
+    color: rgb(209, 0, 0); /* Establece el color del texto en rojo oscuro. */
+    background-color: black; /* Establece el fondo del encabezado en negro. */
+    text-align: center; /* Centra el texto dentro del elemento h1. */
+    font-family: western; /* Establece la fuente del texto. Es posible que necesites proporcionar una fuente llamada "western". */
+    font-size: 40px; /* Establece el tamaño de la fuente en 40 píxeles. */
+}
+
+
+/* Estilos para los select (filtros) */
+select {
+    color: rgb(250, 247, 247); /* Establece el color del texto dentro del select. */
+    background-color: black; /* Establece el fondo del select en negro. */
+    text-align: center; /* Centra el texto dentro del select. */
+    height: 30px; /* Establece la altura del select en 30 píxeles. */
+    width: 150px; /* Establece el ancho del select en 150 píxeles. */
+    border-radius: 2rem; /* Establece un borde redondeado con un radio de 2 unidades. */
+    align-items: center; /* Alinea los elementos dentro del select en el centro. */
+}
+
+/* Estilos para la estadística */
+#estadistica {
+    color: rgb(255, 255, 255); /* Establece el color del texto en blanco. */
+    font-family: Arial, Helvetica, sans-serif; /* Establece la familia de fuentes del texto. */
+    border-radius: 1rem; /* Establece un borde redondeado con un radio de 1 unidad. */
+    align-items: center; /* Alinea los elementos dentro del contenedor en el centro. */
+    justify-content: center; /* Centra el contenido horizontalmente dentro del contenedor. */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una línea. */
+    flex-direction: initial; /* Establece la dirección del eje principal del contenedor (en este caso, la dirección inicial). */
+    margin: auto; /* Establece un margen automático para centrar el contenedor. */
+}
+
+
+/* Estilos para los select (filtros) */
+select {
+    color: rgb(250, 247, 247); /* Establece el color del texto dentro del select. */
+    background-color: black; /* Establece el fondo del select en negro. */
+    text-align: center; /* Centra el texto dentro del select. */
+    height: 30px; /* Establece la altura del select en 30 píxeles. */
+    width: 150px; /* Establece el ancho del select en 150 píxeles. */
+    border-radius: 2rem; /* Establece un borde redondeado con un radio de 2 unidades. */
+    align-items: center; /* Alinea los elementos dentro del select en el centro. */
+}
+
+/* Estilos para los botones */
+button {
+    color: rgb(255, 255, 255); /* Establece el color del texto en blanco. */
+    background-color: black; /* Establece el color de fondo en negro. */
+    height: 30px; /* Establece la altura del botón en 30 píxeles. */
+    width: 150px; /* Establece el ancho del botón en 150 píxeles. */
+    border-radius: 2rem; /* Establece un borde redondeado con un radio de 2 unidades. */
+    align-items: center; /* Alinea los elementos dentro del botón en el centro. */
+}
+
+
+/* Estilos para los elementos dt (nombres de películas) */
+dt {
+    color: rgb(209, 0, 0); /* Establece el color del texto en un tono rojo oscuro. */
+    background-color: black; /* Establece el color de fondo en negro. */
+    background-size: auto; /* Ajusta automáticamente el tamaño del fondo. */
+    text-align: center; /* Centra el texto dentro del elemento dt. */
+    font-family: 'Courier New', Courier, monospace; /* Define la fuente del texto. */
+    font-size: medium; /* Establece el tamaño del texto en un tamaño medio. */
+    justify-content: center; /* Centra el contenido horizontalmente dentro del elemento dt. */
+}
+
+
+/* Estilos para los elementos dd (géneros de películas) */
+dd {
+    color: rgb(250, 250, 250); /* Establece el color del texto en un tono blanco. */
+    background-color: black; /* Establece el color de fondo en negro. */
+    background-size: auto; /* Ajusta automáticamente el tamaño del fondo. */
+    text-align: center; /* Centra el texto dentro del elemento dd. */
+    font-family: 'Courier New', Courier, monospace; /* Define la fuente del texto. */
+    font-size: medium; /* Establece el tamaño del texto en un tamaño medio. */
+    flex-direction: column; /* Establece la dirección de diseño en columna. */
+    align-items: flex-end; /* Alinea los elementos hijos al final del eje transversal. */
+}
+
+
+/* Estilos para las imágenes */
+img {
+    width: 250px; /* Establece el ancho de la imagen en 250 píxeles. */
+    height: 350px; /* Establece la altura de la imagen en 350 píxeles. */
+    flex: 1; /* Asigna un factor de flexibilidad de 1 a la imagen. */
+    flex-grow: 1px; /* Permite que la imagen crezca proporcionalmente con otros elementos flexibles. */
+    flex-basis: 200px; /* Establece el tamaño base de la imagen en 200 píxeles. */
+    overflow: hidden; /* Oculta cualquier contenido que exceda las dimensiones especificadas. */
+    filter: grayscale(1); /* Aplica un filtro de escala de grises a la imagen (totalmente gris). */
+    transition: 0.5s; /* Aplica una transición suave durante 0.5 segundos a cambios en la imagen. */
+}
+
+
+/* Estilos para las imágenes al pasar el mouse */
+img:hover {
+    flex: 2; /* Aumenta el factor de flexibilidad a 2 cuando el mouse está sobre la imagen. */
+    filter: grayscale(0); /* Elimina el filtro de escala de grises al pasar el mouse, haciendo la imagen a color. */
+}
+
+
+/* Estilos para el elemento <ul> con id "root" */
+#root {
+    display: flex; /* Establece el contenedor como un contenedor flexible. */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en líneas si no hay suficiente espacio horizontal. */
+    padding: 10px; /* Agrega un espacio de relleno de 10 píxeles alrededor del contenido del contenedor. */
+    gap: 24px; /* Establece un espacio entre los elementos hijos del contenedor de 24 píxeles. */
+    justify-content: center; /* Centra los elementos hijos horizontalmente en el contenedor flexible. */
+    font-size: medium; /* Establece el tamaño de fuente del texto dentro del contenedor a tamaño medio. */
+    flex-direction: column; /* Establece la dirección principal del contenedor como columna (apila los elementos verticalmente). */
+    align-items: stretch; /* Estira los elementos hijos para que ocupen todo el ancho del contenedor. */
+}
+
+/* Estilos para el encabezado y pie de página */
+header {
+    display: block; /* Establece el valor de visualización del elemento header como bloque. */
+}
+
+footer {
+    color: aliceblue;
+}
+
+/* Estilos para la clase ".peliculas-grid" */
+.peliculas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Estilos para la clase ".estilo-tarjetas" */
+.estilo-tarjetas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 24px;
+}
+
+/* Estilos para el elemento <ul> */
+ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 24px;
+}
+
+/* Aplicar flexbox para colocar los elementos en línea y centrarlos verticalmente */
+main {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    
+  }
+  
+#Genero {
+    color: rgb(236, 236, 17);
+}
