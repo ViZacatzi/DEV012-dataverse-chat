@@ -1,14 +1,16 @@
 let ROUTES = {};
-let rootElement;
+let rootElement = "";
 
-export const setRootEl = (el) => {
+export const setRootElement = (newRootelementValue) => {
   // assign rootEl
+    rootElement = newRootelementValue;
 }
 
-export const setRoutes = (routes) => {
+export const setRouters = (newRoutesValue) => {
   // optional Throw errors if routes isn't an object
   // optional Throw errors if routes doesn't define an /error route
   // assign ROUTES
+    ROUTES = newRoutesValue
 }
 
 const renderView = (pathname, props={}) => {

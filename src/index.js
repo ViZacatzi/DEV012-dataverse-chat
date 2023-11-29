@@ -23,24 +23,28 @@ TODO:
 //import { sortedMovies } from "./dataFunctions.js";
 //import { calcularEstadistica } from "./dataFunctions.js";
 //import { filterMoviesByGenre } from "./dataFunctions.js";
-import { renderItems } from "./view.js";
-import { onURLChange, setRootElement, setRoutes } from "./router.js";
+import { Home } from "./views/home.js";
+import { personaje } from "./views/personaje.js";
+//import { PanelChat } from "./views/panel.js";
+import { ApiKey } from "./views/apikey.js";
+import { error } from "./views/error.js";
+import { onURLChange, setRootElement, setRouters } from "./router.js";
 
 const routes = {
   "/": Home,
-  "/personaje": Personaje,
-  "/panel": PanelChat,
+  "/personaje": personaje,
+  //"/panel": PanelChat,
   "/apikey": ApiKey,
   "/error": error,
 };
 
-const ViewConteiner = document.getElementById("root")
+const ViewContainer = document.getElementById("root")
 
 setRouters(routes);
-setRootElement (ViewConteiner);
+setRootElement (ViewContainer);
 
-document.addEventListener ("DOMContentLoaded", (event) => {
-  onURLChange(event.taget.location.pathname)
+document.addEventListener("DOMContentLoaded", (event) => {
+  onURLChange(event.target.location.pathname)
 
 });
 
@@ -80,9 +84,9 @@ document.addEventListener ("DOMContentLoaded", (event) => {
 
 //buttonBorrar.addEventListener("click", () => {
   // Evento de clic para el botón de borrado
-  root.innerHTML = "";
+  //root.innerHTML = "";
   // Limpiar el contenido del contenedor principal
-  root.appendChild(renderItems(data));
+  //root.appendChild(renderItems(data));
   // Renderizar y agregar todas las películas al contenedor principal
 //});
 
