@@ -1,5 +1,5 @@
 export const chat = (data) => {
-  let componenteChat = "";
+  let componenteChat = ""; 
   data.forEach((content) => {
     imagenChat += ` 
     <img class="imagen-chat" src="${content.imageUrl}">
