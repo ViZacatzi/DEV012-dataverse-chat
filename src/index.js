@@ -19,7 +19,7 @@ TODO:
 */
 
 //import { renderItems } from "./view.js";
-//import data from "./data/dataset.js";
+import data from "./data/dataset.js";
 //import { sortedMovies } from "./dataFunctions.js";
 //import { calcularEstadistica } from "./dataFunctions.js";
 //import { filterMoviesByGenre } from "./dataFunctions.js";
