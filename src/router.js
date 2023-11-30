@@ -19,11 +19,11 @@ const renderView = (pathname, props={}) => {
   root.innerHTML = "";
   // find the correct view in ROUTES for the pathname
   if (ROUTES[pathname]) {
-    const template = ROUTES[pathname]();
+    const template = ROUTES[pathname](props);
     root.appendChild(template);
     // in case not found render the error view
   }else{
-    root.appendChild(ROUTES["/error"]());
+    root.appendChild(ROUTES["/error"](props));
   }
   
 
@@ -33,16 +33,18 @@ const renderView = (pathname, props={}) => {
 
 export const navigateTo = (pathname, props={}) => {
   // update window history with pushState
-  const URLvisited = window.location.hostname + pathname;
+  const URLvisited = window.location.origin + pathname;
   history.pushState({}, "", URLvisited);
 
   // render the view with the pathname and props
   renderView(pathname, props);
 }
 
-export const onURLChange = (pathname) => {
+export const onURLChange = () => {
   // parse the location for the pathname and search params
   // convert the search params to an object
   // render the view with the pathname and object
+  const pathname = window.location.pathname
   renderView(pathname);
 }
+window.onpopstate = onURLChange;

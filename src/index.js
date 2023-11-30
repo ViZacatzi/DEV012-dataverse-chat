@@ -18,8 +18,6 @@ TODO:
 3.- Invocar el router para renderizar la vista correcta.
 */
 
-//import { renderItems } from "./view.js";
-import data from "./data/dataset.js";
 //import { sortedMovies } from "./dataFunctions.js";
 //import { calcularEstadistica } from "./dataFunctions.js";
 //import { filterMoviesByGenre } from "./dataFunctions.js";
@@ -41,10 +39,10 @@ const routes = {
 const ViewContainer = document.getElementById("root")
 
 setRouters(routes);
-setRootElement (ViewContainer);
+setRootElement(ViewContainer);
 
 document.addEventListener("DOMContentLoaded", (event) => {
-  onURLChange(event.target.location.pathname)
+onURLChange(event.target.location.pathname)
 
 });
 

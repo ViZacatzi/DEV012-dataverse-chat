@@ -1,3 +1,5 @@
+export const renderItems = (data) => {
+
 let listadeTarjetas = "";
 
 data.forEach((content) => {
@@ -25,3 +27,4 @@ lista.innerHTML = listadeTarjetas;
 //aqui está actualizando el contenido del elemento de lista en el DOM con las tarjetas generadas previamente en la variable listadeTarjetas.
 return lista;
 //está devolviendo el elemento de lista con las tarjetas generadas.
+}
