@@ -39,10 +39,10 @@ const routes = {
 const ViewContainer = document.getElementById("root")
 
 setRouters(routes);
-setRootElement(ViewContainer);
+setRootElement (ViewContainer);
 
 document.addEventListener("DOMContentLoaded", (event) => {
-onURLChange(event.target.location.pathname)
+  onURLChange(event.target.location.pathname)
 
 });
 

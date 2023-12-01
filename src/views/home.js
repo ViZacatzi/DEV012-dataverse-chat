@@ -9,7 +9,7 @@ export const Home = () => {
       listadeTarjetas += ` 
       <li class='estilo-tarjetas' itemtype='peliculas' itemscope> 
         <dl itemscope itemtype='peliculas'>
-          <img class="estilo-imagen"src="${content.imageUrl}">
+          <img class="estilo-imagen" src="${content.imageUrl}">
           <dt>Nombre:</dt><dd itemprop="name">${content.name}</dd>
           <dt>genre:</dt><dd itemprop="genre">${content.genre}</dd>
         </dl>
@@ -23,6 +23,7 @@ export const Home = () => {
   };
   return renderItems(data);
 };
+
 
 
 
