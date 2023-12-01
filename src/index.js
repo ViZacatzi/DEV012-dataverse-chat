@@ -42,7 +42,17 @@ setRouters(routes);
 setRootElement (ViewContainer);
 
 document.addEventListener("DOMContentLoaded", (event) => {
+<<<<<<< HEAD
   onURLChange(event.target.location.pathname)
+=======
+onURLChange(event.target.location.pathname)
+const imagenClick = document.querySelector('.estilo-imagen');
+  if (imagenClick) {
+    imagenClick.addEventListener("click", () => {
+      alert("Hola");
+    });
+  }
+>>>>>>> 99a5883477a9e1145ac050c4d61ad1ff1e3c8526
 
 });
 
