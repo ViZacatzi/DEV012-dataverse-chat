@@ -43,6 +43,12 @@ setRootElement(ViewContainer);
 
 document.addEventListener("DOMContentLoaded", (event) => {
 onURLChange(event.target.location.pathname)
+const imagenClick = document.querySelector('.estilo-imagen');
+  if (imagenClick) {
+    imagenClick.addEventListener("click", () => {
+      alert("Hola");
+    });
+  }
 
 });
 
