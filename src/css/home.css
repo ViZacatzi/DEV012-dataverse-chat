@@ -2,7 +2,7 @@
 /* Estilos para el cuerpo de la página */
 body {
     background-color: rgb(34, 34, 34); /* Establece el color de fondo del cuerpo en un tono oscuro (gris oscuro). */
-    background-image: linear-gradient(rgba(63, 65, 70, 0.75), rgba(63, 65, 70, 0.75)), url(img/fondo.jpeg);
+    background-image: linear-gradient(rgba(63, 65, 70, 0.75), rgba(63, 65, 70, 0.75)), url(../peliculas/fondo.jpg);
     /* Establece una imagen de fondo con un degradado superpuesto. 
        El degradado (linear-gradient) crea una capa semitransparente encima de la imagen.
        La imagen de fondo se encuentra en la ruta "img/fondo.jpeg". */
