@@ -1,0 +1,30 @@
+/* api.css */
+
+.api {
+    border: 2px solid #555;
+    color: rgb(209, 0, 0);
+    background-color: black;
+    text-align: center;
+    font-family: western;
+    font-size: 50px;
+    width: 200px;
+    height: 70px;
+    margin-top: 120px;
+  }
+  
+  .texto {
+    /* Agrega estilos para el botón de regresar aquí */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: western;
+    font-size: 20px;
+  }
+  
+  .contenedor-api {
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    display: flex;
+    flex-direction: column; /* Añadido para que los elementos se apilen verticalmente */
+  }
