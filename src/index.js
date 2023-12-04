@@ -23,7 +23,7 @@ TODO:
 //import { filterMoviesByGenre } from "./dataFunctions.js";
 import { Home } from "./views/home.js";
 import { personaje } from "./views/personaje.js";
-//import { PanelChat } from "./views/panel.js";
+import { PanelChat } from "./views/panel.js";
 import { ApiKey } from "./views/apikey.js";
 import { vistaError } from "./views/error.js";
 import { onURLChange, setRootElement, setRouters } from "./router.js";
@@ -31,7 +31,7 @@ import { onURLChange, setRootElement, setRouters } from "./router.js";
 const routes = {
   "/": Home,
   "/personaje": personaje,
-  //"/panel": PanelChat,
+  "/panel": PanelChat,
   "/apikey": ApiKey,
   "/error": vistaError,
 };
