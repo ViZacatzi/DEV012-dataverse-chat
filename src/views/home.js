@@ -14,16 +14,50 @@ export const Home = () => {
 
   // Agregar el componente de header al div
   headerview.appendChild(headerComponent);
+  
+  const elementofiltros = filtros();
+  headerview.appendChild(elementofiltros);
+  // aqui llamo a los filtros de la funcion filtros 
 
-  // Hacer algo con headerview o devolverlo según tus necesidades
-  // Aquí es donde debes llamar a la función renderItems
   const listaDeTarjetas = renderItems(data);
   headerview.appendChild(listaDeTarjetas);
-
-  // Finalmente, devolver el contenedor completo
+  //aqui llamamos a la lista de tarjetas de la funcion renderItems
+  
   return headerview;
 };
+  
+//esta e sla funcion que crea HTML para los fitros y botones 
+export const filtros = () => {
+  const elementofiltros = document.createElement('main');
+  elementofiltros.innerHTML = `
+<div>
+<label for="filtros">Genero</label>
+ <select name="filtros" id="filtros" data-testid="select-filter">
+  <option name="seleccion" value="seleccion">-selecciona-</option>
+  <option value="Terror">Terror</option>
+  <option value="Ciencia Ficción">Ciencia Ficción</option>
+  <option value="Thriller">Thriller</option>
+  <option value="Drama">Drama</option>
+</select>
+</div>
 
+<div>
+<label for="ordenamiento">Orden alfabetico</label>
+  <select name="ordenamiento" id="ordenamiento" data-testid="select-ordenamiento">
+  <option name="seleccion" value="seleccion">-selecciona-</option>
+  <option value="asc">A - Z</option>
+  <option value="desc">Z - A</option>
+</select>
+</div>   
+<div>
+<label for="borrar">borrar</label>
+  <button data-testid="button-clear">borrar</button>
+</div>
+<div id="estadistica">Total de películas de terror: <span id="peliculasDeTerror"></span></div>`
+ return elementofiltros;
+};
+
+//funcion para crear HTML para las tarjetas 
 const renderItems = (data) => {
   let listaDeTarjetas = "";
 
