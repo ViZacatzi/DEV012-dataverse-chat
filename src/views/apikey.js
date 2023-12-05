@@ -1,7 +1,25 @@
-export const ApiKey = () => {
-  const elementoApi = document.createElement("div");
+import { footer } from "../componentes/footer.js";
 
-  // Agregar el contenido al elemento header
+export const ApiKey = () => {
+
+  const div = document.createElement("div");
+
+  const apikeyview = div;
+
+  const apikeyComponent = apikeyelement();
+  apikeyview.appendChild(apikeyComponent);
+
+
+  const footerComponent = footer();
+  apikeyview.appendChild(footerComponent);
+  
+
+  return apikeyview;
+};
+
+export const apikeyelement = () => {
+const elementoApi = document.createElement("div");
+
   elementoApi.innerHTML = `
                           <div class="contenedor-api">
                             <p class="api">API-KEY</p><br>
@@ -17,4 +35,4 @@ export const ApiKey = () => {
   `;
 
   return elementoApi;
-};
+}
