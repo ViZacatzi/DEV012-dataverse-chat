@@ -18,15 +18,16 @@ TODO:
 3.- Invocar el router para renderizar la vista correcta.
 */
 
-//import { sortedMovies } from "./dataFunctions.js";
-//import { calcularEstadistica } from "./dataFunctions.js";
-//import { filterMoviesByGenre } from "./dataFunctions.js";
+import { sortedMovies } from "./Lib/datafunctions.js";
+import { calcularEstadistica } from "./Lib/datafunctions.js";
+import { filterMoviesByGenre } from "./Lib/datafunctions.js";
 import { Home } from "./views/home.js";
 import { personaje } from "./views/personaje.js";
 //import { PanelChat } from "./views/panel.js";
 import { ApiKey } from "./views/apikey.js";
 import { vistaError } from "./views/error.js";
 import { onURLChange, setRootElement, setRouters } from "./router.js";
+ 
 
 const routes = {
   "/": Home,
@@ -59,14 +60,14 @@ const imagenClick = document.querySelector('.estilo-tarjetas');
 //root.appendChild(renderItems(data)); //el elemento que se va a agregar es el resultado de llamar a la funcion
 //renderltems(data)
 
-//const selectFiltros = document.querySelector("#filtros"); // Selector para filtros
-//const selectOrdenamiento = document.querySelector("#ordenamiento");
-//const buttonBorrar = document.querySelector('[data-testid="button-clear"]'); //selector de borrar
+const selectFiltros = document.querySelector("#filtros"); // Selector para filtros
+const selectOrdenamiento = document.querySelector("#ordenamiento");
+const buttonBorrar = document.querySelector('[data-testid="button-clear"]'); //selector de borrar
 
 //evento de cambio para selecctor de fitros
 //selectFiltros.addEventListener("change", (evento) => {
-  //console.log;
- // root.innerHTML = ""; //limpiar el contenido del contenedor prin
+  
+  //root.innerHTML = ""; //limpiar el contenido del contenedor prin
  // const selectedGenre = selectFiltros.value; // Obtener el género seleccionado del selector de filtros
  // const filteredMovies = filterMoviesByGenre(data, selectedGenre); // Usa la función de filtrado
   // Filtrar las películas por el género seleccionado
@@ -95,12 +96,13 @@ const imagenClick = document.querySelector('.estilo-tarjetas');
 //});
 
 // El código para calcular la estadística de películas de terror ya se encuentra en dataFunctions.js
-//const generoTerror = "Terror";
-//const totalPeliculasDeTerror = calcularEstadistica(data, generoTerror);
+const generoTerror = "Terror";
+const totalPeliculasDeTerror = calcularEstadistica(data, generoTerror);
 // Calcular estadísticas para el género 'Terror'
-//const estadisticaElement = document.getElementById("peliculasDeTerror");
+const estadisticaElement = document.getElementById("peliculasDeTerror");
 // está obteniendo el elemento del DOM con el identificador 'peliculasDeTerror' y
 //asignándolo a la variable estadisticaElement.
-//estadisticaElement.textContent = totalPeliculasDeTerror.toString();
+estadisticaElement.textContent = totalPeliculasDeTerror.toString();
 //  está actualizando el contenido del elemento de estadística en el DOM
-//con el valor total de películas de terror, que se ha convertido a una cadena de texto.
+//con el valor total de películas de terror, que se ha convertido a una cadena de texto
+
