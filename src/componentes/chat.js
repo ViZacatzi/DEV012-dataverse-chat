@@ -1,14 +1,19 @@
-export const chat = (data) => {
-  let componenteChat = ""; 
-  data.forEach((content) => {
-    imagenChat += ` 
-    <img class="imagen-chat" src="${content.imageUrl}">
-    <input class="chat">
-    <button class="enviar">Enviar</button>
-        `;
-  });
+export const chat = () => {
 
-  const contenidoChat = document.createElement("main");
-  contenidoChat.innerHTML = componenteChat;
-  return contenidoChat;
+  const chatElement = document.createElement('div');
+
+  // Agregar el contenido al elemento header
+  chatElement.innerHTML = `
+                          <div>
+                           <h4>Chatea con...</h4><br>
+                          </div>
+                          <div>
+                            <textarea></textarea><br>
+                          </div>
+                          <div>
+                            <textarea></textarea><br>
+                            <button class="boton-chat">Enviar</button>
+                          </div>
+`;
+  return chatElement;
 };

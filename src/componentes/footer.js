@@ -3,7 +3,7 @@ export const footer = () => {
   const footerElement = document.createElement('footer');
 
   // Agregar el contenido al elemento header
-  footerElement.innerHTML = `<footer name="titulo">creado</footer>`;
+  footerElement.innerHTML = `<p name="titulo">Creado por Nohemi Rodríguez y Victoria Zacatzi</p>`;
 
   return footerElement;
 };

@@ -18,7 +18,11 @@ div {
     align-items: center; /* Centra los elementos secundarios a lo largo del eje transversal del div.
       Esto funciona cuando estás utilizando el modelo de diseño flexbox. */
 }
-
+.filtros {
+    margin-right: 35px;
+    margin-left: 20px;
+    font-family: western; 
+}
 
 /* Estilos para el título */
 h1 {
@@ -27,6 +31,7 @@ h1 {
     text-align: center; /* Centra el texto dentro del elemento h1. */
     font-family: western; /* Establece la fuente del texto. Es posible que necesites proporcionar una fuente llamada "western". */
     font-size: 40px; /* Establece el tamaño de la fuente en 40 píxeles. */
+    padding: 10px;
 }
 
 
@@ -139,7 +144,11 @@ header {
 }
 
 footer {
-    color: aliceblue;
+    color: rgb(250, 250, 250); /* Establece el color del texto en rojo oscuro. */
+    background-color: black; /* Establece el fondo del encabezado en negro. */
+    text-align: center; /* Centra el texto dentro del elemento h1. */
+    font-family: 'Courier New', Courier, monospace; /* Establece la fuente del texto. Es posible que necesites proporcionar una fuente llamada "western". */
+    font-size: 20px;
 }
 
 /* Estilos para la clase ".peliculas-grid" */
