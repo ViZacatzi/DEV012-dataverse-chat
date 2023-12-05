@@ -1,3 +1,4 @@
+import { footer } from "../componentes/footer.js";
 import data from "../data/dataset.js";
 
 export const personaje = () => {

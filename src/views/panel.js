@@ -1,3 +1,5 @@
+import { footer } from "../componentes/footer.js";
+
 import { chat } from "../componentes/chat.js";
 
 export const PanelChat = () => {
