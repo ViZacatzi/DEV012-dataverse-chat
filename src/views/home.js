@@ -8,32 +8,36 @@ export const Home = () => {
   const div = document.createElement("div");
 
   // Utilizar div como contenedor
-  const headerview = div;
+  const homeview = div;
 
   // Obtener el componente de header
   const headerComponent = header();
-
   // Agregar el componente de header al div
-  headerview.appendChild(headerComponent);
+  homeview.appendChild(headerComponent);
 
+ // aqui llamamos a los filtros de HTML de la funcion filtros y se pegan en el div de la vista homeview 
   const elementofiltros = filtros();
-  headerview.appendChild(elementofiltros);
-  // aqui llamo a los filtros de la funcion filtros
+  homeview.appendChild(elementofiltros);
+  
+  //aqui creamos un div para las tarjetas
+  const divContenedorTarjetas = document.createElement("div");
+  divContenedorTarjetas.id = "tarjetas";
+  homeview.appendChild(divContenedorTarjetas);
 
+  //aqui llamamos a la lista de tarjetas de la funcion renderItems y las pegamos en el divContenedorTarjetas
   const listaDeTarjetas = renderItems(data);
-  headerview.appendChild(listaDeTarjetas);
-  //aqui llamamos a la lista de tarjetas de la funcion renderItems
-
+  divContenedorTarjetas.appendChild(listaDeTarjetas);
+  
+  
+  // Aqui agregamos el componente de footer al div de la vista homeview
   const footerComponent = footer();
+  homeview.appendChild(footerComponent);
 
-  // Agregar el componente de header al div
-  headerview.appendChild(footerComponent);
-
-  return headerview;
+  return homeview;
 };
 
-//esta e sla funcion que crea HTML para los fitros y botones
-export const filtros = () => {
+//esta es la funcion que crea HTML para los fitros y botones
+const filtros = () => {
   const elementofiltros = document.createElement("main");
   elementofiltros.innerHTML = `
 <div class="filtros">
@@ -66,6 +70,7 @@ export const filtros = () => {
     <span id="peliculasDeTerror"></span>
 </div>`;
   return elementofiltros;
+  
 };
 
 //funcion para crear HTML para las tarjetas
@@ -89,3 +94,11 @@ const renderItems = (data) => {
 
   return lista;
 };
+
+
+//Aqui llamamos a la funciones del datafuncion para hacer los filtros 
+
+//const tarjetas = document.querySelector("#tarjetas"); // se esta obteniendo el elemento que tiene id "root"
+//y almacena en la variable root.
+//tarjetas.appendChild(renderItems(data)); //el elemento que se va a agregar es el resultado de llamar a la funcion
+//renderltems(data)
