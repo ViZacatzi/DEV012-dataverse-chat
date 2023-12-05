@@ -17,12 +17,12 @@
   
   .boton-regresar {
     /* Agrega estilos para el botón de regresar aquí */
-    background-color: #eb3535; 
+    background-color: #424242; 
     color: rgb(8, 8, 8);
     font-family: western;
     text-align: center;
-    font-size: 15px;
-    padding: 30px 10px;
+    font-size: 20px;
+    padding: 30px ;
     cursor: pointer;
   }
   

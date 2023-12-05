@@ -6,7 +6,7 @@ export const vistaError = () => {
   // Agregar el contenido al elemento de error
   elementoError.innerHTML = `<div class="contenedor"> 
                                <div class="error">ERROR 404
-                                 <button class="boton-regresar">Click aquí para regresar</button>
+                                 <button class="boton-regresar">Regresar</button>
                                </div>
                              </div>`;
 
