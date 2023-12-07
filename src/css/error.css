@@ -1,36 +1,42 @@
 /* error.css */
 
-.error {
-    border: 3px solid #555;
-    color: rgb(209, 0, 0);
-    background-color: black;
-    text-align: center;
-    font-family: western;
-    font-size: 80px;
-    width: 300px;
-    height: 300px;
-    margin-top: 250px;
+  .imagen404 {
+    height: 500px;
+    width: 100px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    object-fit: contain;
+    justify-content: center;
   }
   
+ 
   .boton-regresar {
     /* Agrega estilos para el botón de regresar aquí */
-    background-color: #eb3535; 
+    background-color: #424242; 
     color: rgb(8, 8, 8);
     font-family: western;
     text-align: center;
-    font-size: 15px;
-    padding: 30px 10px;
+    font-size: 20px;
+    padding: 30px ;
     cursor: pointer;
+    
   }
   
-  .contenedor {
+  .contenedor-error {
     justify-content: center;
-    align-items: center;
     margin: 0px;
     text-align:center;
     display: flex;
+    align-items: center;
+    
+    
+  }
+
+  .contenedor-boton {
+    justify-content: center;
+    margin: 0px;
+    text-align:center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
   
