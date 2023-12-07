@@ -3,16 +3,19 @@
 .error {
     border: 3px solid #555;
     color: rgb(209, 0, 0);
+    background-image: url(../peliculas/error404.jpg);
     background-color: black;
-    text-align: center;
     font-family: western;
     font-size: 80px;
-    width: 300px;
+    width: 700px;
     height: 300px;
     margin-top: 250px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    margin-top: 100px;
   }
   
   .boton-regresar {
