@@ -1,7 +1,9 @@
-//import { renderItems } from "./componentes/tarjetas.js";
+
 import data from "../data/dataset.js";
 import { header } from "../componentes/header.js";
 import { footer } from "../componentes/footer.js";
+import { sortedMovies, calcularEstadistica, filterMoviesByGenre } from "../Lib/datafunctions.js";
+
 
 export const Home = () => {
   // Crear un nuevo elemento div
@@ -15,14 +17,24 @@ export const Home = () => {
   // Agregar el componente de header al div
   homeview.appendChild(headerComponent);
 
- // aqui llamamos a los filtros de HTML de la funcion filtros y se pegan en el div de la vista homeview 
+  // aqui llamamos a los filtros de HTML de la funcion filtros y se pegan en el div de la vista homeview 
   const elementofiltros = filtros();
   homeview.appendChild(elementofiltros);
-  
+
   //aqui creamos un div para las tarjetas
   const divContenedorTarjetas = document.createElement("div");
   divContenedorTarjetas.id = "tarjetas";
   homeview.appendChild(divContenedorTarjetas);
+
+  //aqui metemos la funcion de filtrado
+  const manejodefiltrosporgenero = (selectedGenre, data) => {
+    return filterMoviesByGenre(data, selectedGenre);
+  };
+
+  //aqui metemos la funcion de ordenamiento
+  const manejodelordenamientodepeliculas = (selectedGenre, orden, data) => {
+    return sortedMovies(data, selectedGenre, orden);
+  };
 
   //aqui llamamos a la lista de tarjetas de la funcion renderItems y las pegamos en el divContenedorTarjetas
   const listaDeTarjetas = renderItems(data);
@@ -33,6 +45,35 @@ export const Home = () => {
   const footerComponent = footer();
   homeview.appendChild(footerComponent);
 
+  const filtrosSelect = homeview.querySelector("#filtros");
+  const ordenamientoSelect = homeview.querySelector("#ordenamiento");
+  //const buttonBorrar = document.querySelector('[data-testid="button-clear"]');
+
+  // Evento para cambiar el select de género
+  filtrosSelect.addEventListener("change", (event) => {
+    const selectedGenre = event.target.value;
+    const filteredMovies = manejodefiltrosporgenero(selectedGenre, data);
+    const listaDeTarjetasFiltradas = renderItems(filteredMovies);
+    divContenedorTarjetas.innerHTML = "";
+    divContenedorTarjetas.appendChild(listaDeTarjetasFiltradas);
+  });
+
+  // Evento para cambiar el select de ordenamiento
+  ordenamientoSelect.addEventListener("change", (event) => {
+    const selectedGenre = filtrosSelect.value;
+    const orden = event.target.value;
+    const sorted = manejodelordenamientodepeliculas(selectedGenre, orden, data);
+    const listaDeTarjetasOrdenadas = renderItems(sorted);
+    divContenedorTarjetas.innerHTML = "";
+    divContenedorTarjetas.appendChild(listaDeTarjetasOrdenadas);
+  });
+
+// Evento para darle funcionamiento al boton
+//buttonBorrar.addEventListener("click", () => {
+  //divContenedorTarjetas.innerHTML = "";
+ // divContenedorTarjetas.appendChild(data);
+//});  
+  
   return homeview;
 };
 
@@ -69,8 +110,9 @@ const filtros = () => {
   <label class="texto">Total de películas de terror: </label>
     <span id="peliculasDeTerror"></span>
 </div>`;
-  return elementofiltros;
-  
+
+
+return elementofiltros;
 };
 
 //funcion para crear HTML para las tarjetas
@@ -95,10 +137,3 @@ const renderItems = (data) => {
   return lista;
 };
 
-
-//Aqui llamamos a la funciones del datafuncion para hacer los filtros 
-
-//const tarjetas = document.querySelector("#tarjetas"); // se esta obteniendo el elemento que tiene id "root"
-//y almacena en la variable root.
-//tarjetas.appendChild(renderItems(data)); //el elemento que se va a agregar es el resultado de llamar a la funcion
-//renderltems(data)
