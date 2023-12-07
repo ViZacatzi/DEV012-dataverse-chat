@@ -23,14 +23,6 @@ setRootElement (ViewContainer);
 
 document.addEventListener("DOMContentLoaded", (event) => {
 onURLChange(event.target.location.pathname)
-//const imagenClick = document.querySelector('.estilo-tarjetas');
-  //if (imagenClick) {
-   // imagenClick.addEventListener("click", () => {
-  //    alert("Hola");
-  //  });
-  
- 
-  
 
 });
 

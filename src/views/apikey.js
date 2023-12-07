@@ -23,10 +23,10 @@ const elementoApi = document.createElement("div");
   elementoApi.innerHTML = `
                           <div class="contenedor-api">
                             <p class="api">API-KEY</p><br>
-                            <label class="texto" for="user">Usuario:</label>
+                            <label class="texto" for="user">Pon tu nombre aqui</label>
                             <input type="text" id="user"><br>
-                            <label class="texto" for="pass">Contraseña:</label>
-                            <input type="password" id="pass"><br>
+                            <label class="texto" for="api">Api-Key</label>
+                            <input type="texto" id="api"><br>
                               <div class="botones"><br>
                                <button class="boton-api">Aceptar</button>
                                <button class="boton-limpiar">Borrar todo</button>

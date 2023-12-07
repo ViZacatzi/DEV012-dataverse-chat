@@ -1,8 +1,8 @@
 import { footer } from "../componentes/footer.js";
 import data from "../data/dataset.js";
 
-export const personaje = () => {
-  
+export const personaje = (props) => {
+  console.log(props)
   const character = (data) => {
 
     let personajes = "";
