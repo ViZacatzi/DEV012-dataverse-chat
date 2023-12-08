@@ -29,7 +29,7 @@ const renderView = (pathname, props={}) => {
 
   // render the correct view passing the value of props
   // add the view element to the DOM root element
-} 
+};
 
 export const navigateTo = (pathname, props={}) => {
   // update window history with pushState
@@ -42,9 +42,10 @@ export const navigateTo = (pathname, props={}) => {
 
 export const onURLChange = () => {
   // parse the location for the pathname and search params
-  // convert the search params to an object
-  // render the view with the pathname and object
+   //convert the search params to an object
+   //render the view with the pathname and object
   const pathname = window.location.pathname
   renderView(pathname);
-}
+};
+
 window.onpopstate = onURLChange;
