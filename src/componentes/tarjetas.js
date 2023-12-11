@@ -8,6 +8,7 @@ data.forEach((content) => {
   //utilize "`" para concatenar texto al valor que ya tiene "lista de tarjetas"
   //el fracmento esta dentro de un bucle data.forEach((content) => {...})
   listadeTarjetas += ` 
+  <a href="/personaje/${content.name.toLowerCase()}">
       <li class='estilo-tarjetas' itemtype='peliculas' itemscope> 
         <dl itemscope itemtype='peliculas'>
           <img class="estilo-imagen" src="${content.imageUrl}">
@@ -15,6 +16,7 @@ data.forEach((content) => {
           <dt>genre:</dt><dd itemprop="genre">${content.genre}</dd>
         </dl>
       </li>
+      </a>
     `; // está agregando una tarjeta a la lista. La plantilla de cadena se utiliza
   //para construir el contenido de la tarjeta con propiedades como imageUrl, name y genre de un objeto content.
 });
@@ -27,4 +29,4 @@ lista.innerHTML = listadeTarjetas;
 //aqui está actualizando el contenido del elemento de lista en el DOM con las tarjetas generadas previamente en la variable listadeTarjetas.
 return lista;
 //está devolviendo el elemento de lista con las tarjetas generadas.
-}
+};

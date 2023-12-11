@@ -1,12 +1,8 @@
 import data from "../data/dataset.js";
 import { header } from "../componentes/header.js";
 import { footer } from "../componentes/footer.js";
-import {
-  sortedMovies,
-  calcularEstadistica,
-  filterMoviesByGenre,
-} from "../Lib/datafunctions.js";
-
+import {sortedMovies,calcularEstadistica,filterMoviesByGenre,} from "../Lib/datafunctions.js";
+import { navigateTo } from '../router.js';
 export const Home = () => {
   // Crear un nuevo elemento div
   const div = document.createElement("div");
@@ -26,6 +22,7 @@ export const Home = () => {
   //aqui creamos un div para las tarjetas
   const divContenedorTarjetas = document.createElement("div");
   divContenedorTarjetas.id = "tarjetas";
+
   homeview.appendChild(divContenedorTarjetas);
 
   //aqui metemos la funcion de filtrado
@@ -44,14 +41,23 @@ export const Home = () => {
 
   //aqui llamamos a la lista de tarjetas de la funcion renderItems y las pegamos en el divContenedorTarjetas
   const listaDeTarjetas = renderItems(data);
-  const tarjetas = listaDeTarjetas.querySelectorAll("li")
-  tarjetas.forEach( function (litarjeta){
+  //const tarjetas = listaDeTarjetas.querySelectorAll("li")
+  //tarjetas.forEach( function (litarjeta){
     
-    console.log(litarjeta)
-  } )
+    //console.log(litarjeta)
+  //} )
   
   divContenedorTarjetas.appendChild(listaDeTarjetas);
-
+  
+  const tarjetas = divContenedorTarjetas.querySelectorAll(".estilo-tarjetas");
+  tarjetas.forEach((tarjetas) => {
+    tarjetas.addEventListener("click", () => {
+      // Obtén el ID desde el atributo de datos (data-id) de la tarjeta
+      const tarjetaId = tarjetas.dataset.id;
+      // Navega a la ruta del personaje al hacer clic
+      navigateTo(`/personaje/${tarjetaId}`);
+    });
+  });
   // Aqui agregamos el componente de footer al div de la vista homeview
   const footerComponent = footer();
   homeview.appendChild(footerComponent);
@@ -157,3 +163,4 @@ const renderItems = (data) => {
 
   return lista;
 };
+
