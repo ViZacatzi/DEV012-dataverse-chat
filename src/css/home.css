@@ -153,7 +153,7 @@ footer {
     text-align: center; /* Centra el texto dentro del elemento h1. */
     font-family: 'Courier New', Courier, monospace; /* Establece la fuente del texto. Es posible que necesites proporcionar una fuente llamada "western". */
     font-size: 20px;
-    margin-top: 300px;
+    margin-top: 100px;
 }
 
 /* Estilos para la clase ".peliculas-grid" */

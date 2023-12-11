@@ -1,38 +1,38 @@
+#contenedor-panel{
+  border: 4px solid #f9f9f9;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+h4 {
+  color: rgb(209, 0, 0); 
+  background-color: black; 
+  text-align: left; 
+  font-family: western; 
+  font-size: 30px; 
+}
+
 .caja-chat {
-    border: 4px solid #555;
     background-color: black;
     color: white;
     font-family: western;
     font-size: 18px;
+    border-radius: 30px;
     width: 700px;
     height: 400px;
     box-shadow: 0 0 15px rgb(233, 21, 71);
+    margin-bottom: 10px;
   }
   
-  .contenedor-chat {
-    border: 4px solid #555;
-    width: 700px;
-    justify-content: center;
-    align-items: center;
-    margin: 0px;
-    display: flex;
-    
-  }
-
   .texto-chat {
+    border-radius: 30px;
     background-color: black;
     color: white;
     font-size: 16px;
     font-family: western;
     width: 550px;
     font-size: 17px;
-    box-shadow: 0 0 30px rgb(233, 21, 71);
   }
 
-  .contenedor-boton-regreso  {
-    justify-content: center;
-    align-items: center;
-    margin: 0px;
-    display: flex;
-    margin-top: 50px;
-  }
+  
