@@ -8,6 +8,7 @@ import { vistaError } from "./views/error.js";
 import { onURLChange, setRootElement, setRouters } from "./router.js";
 
 
+
 const routes = {
   "/": Home,
   "/personaje": personaje,
@@ -23,6 +24,13 @@ setRootElement (ViewContainer);
 
 document.addEventListener("DOMContentLoaded", (event) => {
 onURLChange(event.target.location.pathname)
+//const imagenClick = document.querySelector('.estilo-tarjetas');
+  //if (imagenClick) {
+   // imagenClick.addEventListener("click", () => {
+  //    alert("Hola");
+  //  });
+  
+  
 
 });
 

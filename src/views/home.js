@@ -41,15 +41,9 @@ export const Home = () => {
 
   //aqui llamamos a la lista de tarjetas de la funcion renderItems y las pegamos en el divContenedorTarjetas
   const listaDeTarjetas = renderItems(data);
-  //const tarjetas = listaDeTarjetas.querySelectorAll("li")
-  //tarjetas.forEach( function (litarjeta){
-    
-    //console.log(litarjeta)
-  //} )
-  
   divContenedorTarjetas.appendChild(listaDeTarjetas);
   
-  const tarjetas = divContenedorTarjetas.querySelectorAll(".estilo-tarjetas");
+  const tarjetas = divContenedorTarjetas.querySelectorAll("li");
   tarjetas.forEach((tarjetas) => {
     tarjetas.addEventListener("click", () => {
       // Obtén el ID desde el atributo de datos (data-id) de la tarjeta
