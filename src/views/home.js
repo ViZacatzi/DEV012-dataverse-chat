@@ -50,12 +50,15 @@ export const Home = () => {
   divContenedorTarjetas.appendChild(listaDeTarjetas);
   
   const tarjetas = divContenedorTarjetas.querySelectorAll(".estilo-tarjetas");
-  tarjetas.forEach((tarjetas) => {
-    tarjetas.addEventListener("click", () => {
+  tarjetas.forEach((tarjeta) => {
+   // console.log(tarjeta)
+    tarjeta.addEventListener("click", () => {
+      const movieName = tarjeta.getAttribute("moviename")
       // Obtén el ID desde el atributo de datos (data-id) de la tarjeta
-      const tarjetaId = tarjetas.dataset.id;
+     // const tarjetaId = tarjeta.dataset.id;
       // Navega a la ruta del personaje al hacer clic
-      navigateTo(`/personaje/${tarjetaId}`);
+      navigateTo(`/personaje/${movieName}`);
+      
     });
   });
   // Aqui agregamos el componente de footer al div de la vista homeview
@@ -148,7 +151,7 @@ const renderItems = (data) => {
 
   data.forEach((content) => {
     listaDeTarjetas += ` 
-      <li class='estilo-tarjetas' itemtype='peliculas' itemscope> 
+      <li class='estilo-tarjetas' itemtype='peliculas' itemscope moviename="${content.name}"> 
         <dl itemscope itemtype='peliculas'>
           <img class="estilo-imagen" src="${content.imageUrl}">
           <dt>Nombre:</dt><dd itemprop="name">${content.name}</dd>
