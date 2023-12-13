@@ -8,17 +8,19 @@
 /* Estilos para la lista de usuarios a la izquierda */
 .lista-de-usuarios {
   width: 25%;
-  background-color: #f2f2f2;
+  background-color: #f2f2f2; 
   padding: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
+  
+  
 }
 
 .usuario {
   padding: 8px;
   margin-bottom: 10px;
   cursor: pointer;
-  background-color: #ccc;
+  background-color: #e9e2e2;
   border-radius: 5px;
 }
 
