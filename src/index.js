@@ -10,7 +10,7 @@ import { onURLChange, setRootElement, setRouters } from "./router.js";
 
 const routes = {
   "/": Home,
-  "/personaje": personaje,
+  "/personaje/:movieName": personaje,
   "/panel": PanelChat,
   "/apikey": ApiKey,
   "/error": vistaError,

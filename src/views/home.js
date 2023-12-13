@@ -57,6 +57,7 @@ export const Home = () => {
       // Obtén el ID desde el atributo de datos (data-id) de la tarjeta
      // const tarjetaId = tarjeta.dataset.id;
       // Navega a la ruta del personaje al hacer clic
+      console.log("Navigating to:", `/personaje/${movieName}`);
       navigateTo(`/personaje/${movieName}`);
       
     });
