@@ -3,14 +3,13 @@ import data from "../data/dataset.js";
 
 export const personaje = (props) => {
   console.log(props);
-  const character = (id) => {
-    const personajeEncontrado = data.find((content) => content.id === id);
-
+  const character = () => {
+    const personajeEncontrado = data.find((content) => content.name === movieName);
     if (personajeEncontrado) {
       const contenidoPersonaje = document.createElement("div");
       contenidoPersonaje.classList.add("tarjeta-personaje");
       contenidoPersonaje.setAttribute("itemtype", "peliculas");
-      contenidoPersonaje.innerHTML = ` 
+      contenidoPersonaje.innerHTML = `
               <img class="imagen-personaje" src="${personajeEncontrado.imageUrl}">
               <dt>Nombre:</dt><dd itemprop="name">${personajeEncontrado.name}</dd>
               <dt>description:</dt><dd itemprop="description">${personajeEncontrado.description}</dd>
@@ -24,9 +23,8 @@ export const personaje = (props) => {
       return "Personaje no encontrado";
     }
   };
-
   // Supongamos que props contiene el ID del personaje que se desea mostrar
-  const contenido = character(props.id);
-  // Aquí puedes adjuntar contenido a tu elemento HTML
-  document.getElementById("contenedor").appendChild(contenido); // Reemplaza 'contenedor' con el ID de tu contenedor
+const contenido = character();
+  // Adjunta el contenido a tu elemento HTML
+ document.querySelector("contenedor").appendChild(contenido); // Reemplaza 'contenedor' con el ID de tu contenedor
 };

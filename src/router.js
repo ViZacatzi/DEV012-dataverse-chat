@@ -31,7 +31,7 @@ const renderView = (pathname, props={}) => {
   // add the view element to the DOM root element
 };
 
-export const navigateTo = (pathname, props={}) => {
+export const navigateTo = (pathname, props = {}) => {
   // update window history with pushState
   const URLvisited = window.location.origin + pathname;
   history.pushState({}, "", URLvisited);

@@ -19,7 +19,7 @@ export default [
   },
   {
     id: "the-shining-1980",
-    name: "The Shining",
+    name: "The_Shining",
     shortDescription:
       "Un escritor enloquece en un hotel aislado durante el invierno.",
     description:
@@ -65,7 +65,7 @@ export default [
   },
   {
     id: "thegreenmile-1999",
-    name: "The Green Mile",
+    name: "The_Green_Mile",
     shortDescription:
       "Un guardia de prisión descubre a un prisionero con habilidades sobrenaturales.",
     description:
@@ -81,7 +81,7 @@ export default [
   },
   {
     id: "doctor-sleep-2019",
-    name: "Doctor Sleep",
+    name: "Doctor_Sleep",
     shortDescription:
       "Una secuela de 'The Shining', sigue a Danny Torrance en la adultez.",
     description:
@@ -97,7 +97,7 @@ export default [
   },
   {
     id: "secret-window-2004",
-    name: "Secret Window",
+    name: "Secret_Window",
     shortDescription:
       "Un escritor en busca de tranquilidad se enfrenta a un acosador obsesionado.",
     description:
@@ -113,7 +113,7 @@ export default [
   },
   {
     id: "dolores-claiborne-1995",
-    name: "Dolores Claiborne",
+    name: "Dolores_Claiborne",
     shortDescription: "Una mujer es acusada de asesinar a su empleadora.",
     description:
       "Basada en la novela de Stephen King, 'Dolores Claiborne' es un drama criminal que narra la historia de una mujer acusada de asesinato.",
@@ -128,7 +128,7 @@ export default [
   },
   {
     id: "pet-sematary-1989",
-    name: "Pet Sematary",
+    name: "Pet_Sematary",
     shortDescription: "Un cementerio de mascotas tiene poderes oscuros.",
     description:
       "Basada en la novela de Stephen King, 'Pet Sematary' es una historia de terror sobre un cementerio de mascotas que resucita a los muertos con consecuencias horribles.",
@@ -143,7 +143,7 @@ export default [
   },
   {
     id: "stand-by-me-1986",
-    name: "Stand by Me",
+    name: "Stand_by_Me",
     shortDescription:
       "Un grupo de amigos emprende un viaje para encontrar el cuerpo de un niño desaparecido.",
     description:
@@ -159,7 +159,7 @@ export default [
   },
   {
     id: "thedeadzone-1983",
-    name: "The Dead Zone",
+    name: "The_Dead_Zone",
     shortDescription:
       "Un hombre adquiere la capacidad de ver el futuro, pero a un alto costo.",
     description:
@@ -175,7 +175,7 @@ export default [
   },
   {
     id: "thelangoliers-1995",
-    name: "The Langoliers",
+    name: "The_Langoliers",
     shortDescription:
       "Los pasajeros de un avión quedan atrapados en una realidad aterradora.",
     description:
@@ -207,7 +207,7 @@ export default [
   },
   {
     id: "rose-red-2002",
-    name: "Rose Red",
+    name: "Rose_Red",
     shortDescription: "Una profesora investiga una mansión embrujada.",
     description:
       "Basada en el guion de Stephen King, 'Rose Red' es una miniserie de terror que sigue a una profesora y un equipo de investigadores que exploran una mansión embrujada.",
@@ -238,7 +238,7 @@ export default [
   },
   {
     id: "needful-things-1993",
-    name: "Needful Things",
+    name: "Needful_Things",
     shortDescription:
       "Un misterioso comerciante causa caos en una pequeña ciudad.",
     description:
@@ -254,7 +254,7 @@ export default [
   },
   {
     id: "golden-years-1991",
-    name: "Golden Years",
+    name: "Golden_Years",
     shortDescription:
       "Un hombre adquiere habilidades sobrenaturales tras un accidente de laboratorio.",
     description:
@@ -270,7 +270,7 @@ export default [
   },
   {
     id: "graveyard-shift-1990",
-    name: "Graveyard Shift",
+    name: "Graveyard_Shift",
     shortDescription:
       "Trabajadores de un molino enfrentan horrores en el turno de noche.",
     description:
@@ -286,7 +286,7 @@ export default [
   },
   {
     id: "children-of-the-corn-1984",
-    name: "Children of the Corn",
+    name: "Children_of_the_Corn",
     shortDescription: "Un pueblo de niños adora a una entidad maligna.",
     description:
       "Basada en el cuento de Stephen King, 'Children of the Corn' es un thriller de terror que sigue a un pueblo de niños que adoran a una entidad maligna.",
@@ -301,7 +301,7 @@ export default [
   },
   {
     id: "the-shawshank-redemption-1994",
-    name: "The Shawshank Redemption",
+    name: "The_Shawshank_Redemption",
     shortDescription: "Un hombre inocente lucha por su libertad en prisión.",
     description:
       "Basada en la novela de Stephen King, 'The Shawshank Redemption' es un drama carcelario que narra la historia de un hombre inocente que lucha por su libertad en prisión.",
@@ -332,7 +332,7 @@ export default [
   },
   {
     id: "the-mist-2007",
-    name: "The Mist",
+    name: "The_Mist",
     shortDescription:
       "Los residentes de un pueblo enfrentan horrores sobrenaturales en medio de una misteriosa niebla.",
     description:
@@ -348,7 +348,7 @@ export default [
   },
   {
     id: "geralds-game-2017",
-    name: "Gerald's Game",
+    name: "Gerald's_Game",
     shortDescription:
       "Una mujer lucha por sobrevivir esposada a una cama en una casa aislada.",
     description:
