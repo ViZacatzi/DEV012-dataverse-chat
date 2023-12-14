@@ -17,7 +17,6 @@ const renderView = (pathname, props={}) => {
   // clear the root element
   const root = rootElement;
   root.innerHTML = "";
-  console.log('Rendering view for:', pathname);
   // find the correct view in ROUTES for the pathname
   if (ROUTES[pathname]) {
     const template = ROUTES[pathname](props);
@@ -35,7 +34,6 @@ const renderView = (pathname, props={}) => {
 export const navigateTo = (pathname, props = {}) => {
   // update window history with pushState
   const URLvisited = window.location.origin + pathname;
-  console.log('Navigating to:', URLvisited);
   history.pushState({}, "", URLvisited);
 
   // render the view with the pathname and props
@@ -47,7 +45,6 @@ export const onURLChange = () => {
    //convert the search params to an object
    //render the view with the pathname and object
   const pathname = window.location.pathname
-  console.log('Ruta actual:', pathname);
   renderView(pathname);
 };
 
