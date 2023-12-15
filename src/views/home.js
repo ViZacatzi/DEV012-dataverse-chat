@@ -160,4 +160,3 @@ const renderItems = (data) => {
 
   return lista;
 };
-
