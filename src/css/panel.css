@@ -8,24 +8,52 @@
 /* Estilos para la lista de usuarios a la izquierda */
 .lista-de-usuarios {
   width: 25%;
-  background-color: #f2f2f2;
+  background-color: #f2f2f2; 
   padding: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
+  
+  
 }
 
 .usuario {
   padding: 8px;
   margin-bottom: 10px;
   cursor: pointer;
-  background-color: #ccc;
+  background-color: #e9e2e2;
   border-radius: 5px;
 }
 
 .usuario:hover {
   background-color: #3c3c3c;
 }
+.img-chat {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
 
+/* Estilos para el contenedor del chat */
+.contenedor-chat {
+  width: 300px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  background-color: #1f1f1f;
+  color: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para los mensajes */
+.caja-chat {
+  width: 75%;
+  height: 400px;
+  background-color: #292929;
+  overflow-y: scroll;
+  padding: 10px;
+}
+to  Everyone
 .img-chat {
   width: 40px;
   height: 40px;
@@ -78,7 +106,6 @@
   padding: 10px;
   background-color: #2c2c2c;
 }
-
 .cuadro-de-entrada input {
   flex: 1;
   padding: 8px;
