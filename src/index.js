@@ -1,5 +1,5 @@
 import { Home } from "./views/home.js";
-import { personaje } from "./views/personaje.js";
+import { pelicula } from "./views/pelicula.js";
 import { PanelChat } from "./views/panel.js";
 import { ApiKey } from "./views/apikey.js";
 import { vistaError } from "./views/error.js";
@@ -43,8 +43,8 @@ const routes = {
 
 // Agregar las rutas de las películas al objeto de rutas
 movies.forEach((movie) => {
-  const moviePath = `/personaje/${movie}`;
-  routes[moviePath] = personaje;
+  const moviePath = `/pelicula/${movie}`;
+  routes[moviePath] = pelicula;
 });
 
 // Configurar el enrutador con las rutas

@@ -1,7 +1,7 @@
 import { footer } from "../componentes/footer.js";
 import data from "../data/dataset.js";
 
-export const personaje = (props) => {
+export const pelicula = (props) => {
   //console.log(props);
   const character = (id) => {
     const personajeEncontrado = data.find((content) => content.id === id);
