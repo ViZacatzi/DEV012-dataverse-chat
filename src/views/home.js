@@ -1,8 +1,13 @@
 import data from "../data/dataset.js";
 import { header } from "../componentes/header.js";
 import { footer } from "../componentes/footer.js";
-import {sortedMovies,calcularEstadistica,filterMoviesByGenre,} from "../Lib/datafunctions.js";
-import { navigateTo } from '../router.js';
+import {
+  sortedMovies,
+  calcularEstadistica,
+  filterMoviesByGenre,
+} from "../Lib/datafunctions.js";
+import { navigateTo } from "../router.js";
+
 export const Home = () => {
   // Crear un nuevo elemento div
   const div = document.createElement("div");
@@ -35,24 +40,21 @@ export const Home = () => {
     return sortedMovies(data, selectedGenre, orden);
   };
 
-  //const manejodeestadisticas = (data, selectedGenre) => {
-    //return calcularEstadistica(data, selectedGenre);
-  //};
+  const manejoEstadisticas = (data, selectedGenre) => {
+    return calcularEstadistica(data, selectedGenre);
+  };
 
   //aqui llamamos a la lista de tarjetas de la funcion renderItems y las pegamos en el divContenedorTarjetas
   const listaDeTarjetas = renderItems(data);
   divContenedorTarjetas.appendChild(listaDeTarjetas);
-  
+
+  //esta función nos ayuda a identificar las tarjetas para enviarlas a la vista correcta
   const tarjetas = divContenedorTarjetas.querySelectorAll(".estilo-tarjetas");
   tarjetas.forEach((tarjeta) => {
-   // console.log(tarjeta)
     tarjeta.addEventListener("click", () => {
-      const movieName = tarjeta.getAttribute("moviename")
-      // Obtén el ID desde el atributo de datos (data-id) de la tarjeta
-     // const tarjetaId = tarjeta.dataset.id;
+      const movieName = tarjeta.getAttribute("moviename");
       // Navega a la ruta del personaje al hacer clic
       navigateTo(`/pelicula/${movieName}`, movieName);
-      
     });
   });
   // Aqui agregamos el componente de footer al div de la vista homeview
@@ -62,7 +64,9 @@ export const Home = () => {
   const filtrosSelect = homeview.querySelector("#filtros");
   const ordenamientoSelect = homeview.querySelector("#ordenamiento");
   const buttonBorrar = homeview.querySelector('[data-testid="button-clear"]');
-  //const estadisticaElement = homeview.getElementById("peliculasDeTerror");
+  const estadisticaElement = homeview.querySelector("#peliculasDeTerror");
+  const buttonApi = homeview.querySelector('[data-testid="button-api-key"]');
+
   // Evento para cambiar el select de género
   filtrosSelect.addEventListener("change", (event) => {
     const selectedGenre = event.target.value;
@@ -82,7 +86,7 @@ export const Home = () => {
     divContenedorTarjetas.appendChild(listaDeTarjetasOrdenadas);
   });
 
-  // Evento para darle funcionamiento al boton
+  // Evento para darle funcionamiento al boton de borrar
   buttonBorrar.addEventListener("click", () => {
     filtrosSelect.value = "seleccion";
     ordenamientoSelect.value = "seleccion";
@@ -90,15 +94,17 @@ export const Home = () => {
     divContenedorTarjetas.appendChild(renderItems(data));
   });
 
-  //const generoTerror = "Terror";
-  //const totalPeliculasDeTerror = manejodeestadisticas(data, generoTerror);
-  // Calcular estadísticas para el género 'Terror'
+  //Calcular estadísticas para el género 'Terror'
+  const generoTerror = "Terror";
+  const totalPeliculasDeTerror = manejoEstadisticas(data, generoTerror);
+  // está obteniendo el elemento del DOM con el identificador 'peliculasDeTerror' y asignándolo a la variable estadisticaElement.
+  estadisticaElement.textContent = totalPeliculasDeTerror.toString();
+
+  // Evento para darle funcionamiento al boton de api
+  buttonApi.addEventListener("click", () => {
+  navigateTo(`/apikey`);
+  });
   
-  // está obteniendo el elemento del DOM con el identificador 'peliculasDeTerror' y
-  //asignándolo a la variable estadisticaElement.
- // estadisticaElement.textContent = totalPeliculasDeTerror.toString();
-  //  está actualizando el contenido del elemento de estadística en el DOM
-  //con el valor total de películas de terror, que se ha convertido a una cadena de texto.
   return homeview;
 };
 
@@ -107,7 +113,7 @@ const filtros = () => {
   const elementofiltros = document.createElement("main");
   elementofiltros.innerHTML = `
 <div class="filtros">
-  <label class="texto" for="filtros">Genero</label>
+  <label class="texto" for="filtros">Género</label>
   <select name="filtros" id="filtros" data-testid="select-filter">
     <option name="seleccion" value="seleccion">-selecciona-</option>
     <option value="Terror">Terror</option>
@@ -128,8 +134,13 @@ const filtros = () => {
 
 <div>
   <label for="borrar"></label>
-   <button data-testid="button-clear">borrar</button>
-  </div>
+   <button data-testid="button-clear">Borrar</button>
+</div>
+
+<div>
+  <label for="button-api-key"></label>
+   <button data-testid="button-api-key">API-KEY</button>
+</div>
 
 <div class="filtros" id="estadistica">
   <label class="texto">Total de películas de terror: </label>
