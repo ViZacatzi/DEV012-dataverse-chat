@@ -1,0 +1,45 @@
+/* Estilos para la vista de detalles de la película */
+
+/* Contenedor principal */
+.tarjeta-pelicula {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Imagen de la película */
+  .imagen-pelicula {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para los detalles de la película */
+  .tarjeta-pelicula dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+  }
+  
+  .tarjeta-pelicula dt {
+    font-weight: bold;
+  }
+  
+  /* Botón de volver */
+  .boton-volver {
+    margin-top: 20px;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .boton-volver:hover {
+    background-color: #258cd1;
+  }
+  

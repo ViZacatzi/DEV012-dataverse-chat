@@ -7,10 +7,10 @@ export const pelicula = (movieName) => {
 
     if (peliculaEncontrada) {
       const contenidoPelicula = document.createElement("div");
-      contenidoPelicula.classList.add("tarjeta-personaje");
+      contenidoPelicula.classList.add("tarjeta-pelicula");
       contenidoPelicula.setAttribute("itemtype", "peliculas");
       contenidoPelicula.innerHTML = ` 
-              <img class="imagen-personaje" src="${peliculaEncontrada.imageUrl}">
+              <img class="imagen-pelicula" src="${peliculaEncontrada.imageUrl}">
               <dt>Nombre:</dt><dd itemprop="name">${peliculaEncontrada.name}</dd>
               <dt>description:</dt><dd itemprop="description">${peliculaEncontrada.description}</dd>
               <dt>genre:</dt><dd itemprop="genre">${peliculaEncontrada.genre}</dd>
