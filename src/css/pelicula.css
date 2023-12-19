@@ -1,45 +1,21 @@
-/* Estilos para la vista de detalles de la película */
-
-/* Contenedor principal */
+/* Agrega estilos CSS para la tarjeta de la película */
 .tarjeta-pelicula {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex; /* Utiliza el modelo de caja flexible */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
   }
   
-  /* Imagen de la película */
+  /* Estilos para la imagen de la película */
   .imagen-pelicula {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    width: 200px; /* Ajusta el ancho según tus necesidades */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    margin-right: 20px; /* Margen a la derecha de la imagen para separarla de la descripción */
   }
   
-  /* Estilos para los detalles de la película */
-  .tarjeta-pelicula dl {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 10px;
+  /* Estilos para la descripción de la película */
+  /* Puedes ajustar el tamaño y otros estilos según tus necesidades */
+  .tarjeta-pelicula dd {
+    margin: 0; /* Elimina el margen predeterminado */
+    font-size: 16px; /* Ajusta el tamaño del texto */
   }
   
-  .tarjeta-pelicula dt {
-    font-weight: bold;
-  }
-  
-  /* Botón de volver */
-  .boton-volver {
-    margin-top: 20px;
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .boton-volver:hover {
-    background-color: #258cd1;
-  }
   
