@@ -1,0 +1,21 @@
+/* Agrega estilos CSS para la tarjeta de la película */
+.tarjeta-pelicula {
+    display: flex; /* Utiliza el modelo de caja flexible */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+  }
+  
+  /* Estilos para la imagen de la película */
+  .imagen-pelicula {
+    width: 200px; /* Ajusta el ancho según tus necesidades */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    margin-right: 20px; /* Margen a la derecha de la imagen para separarla de la descripción */
+  }
+  
+  /* Estilos para la descripción de la película */
+  /* Puedes ajustar el tamaño y otros estilos según tus necesidades */
+  .tarjeta-pelicula dd {
+    margin: 0; /* Elimina el margen predeterminado */
+    font-size: 16px; /* Ajusta el tamaño del texto */
+  }
+  
+  

@@ -5,17 +5,6 @@
   margin: 20px auto;
 }
 
-/* Estilos para la lista de usuarios a la izquierda */
-.lista-de-usuarios {
-  width: 25%;
-  background-color: #f2f2f2; 
-  padding: 10px;
-  display: flex;
-  flex-direction: column; 
-  
-  
-}
-
 .usuario {
   padding: 8px;
   margin-bottom: 10px;
@@ -29,7 +18,7 @@
 }
 .img-chat {
   width: 40px;
-  height: 40px;
+  height: 30px;
   margin-right: 10px;
 }
 
@@ -37,6 +26,8 @@
 .contenedor-chat {
   width: 300px;
   margin: 20px auto;
+  position: absolute;
+  top: 5px; left: 300px;
   border: 1px solid #ccc;
   background-color: #1f1f1f;
   color: #eee;
@@ -47,34 +38,7 @@
 
 /* Estilos para los mensajes */
 .caja-chat {
-  width: 75%;
-  height: 400px;
-  background-color: #292929;
-  overflow-y: scroll;
-  padding: 10px;
-}
-to  Everyone
-.img-chat {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-}
-
-/* Estilos para el contenedor del chat */
-.contenedor-chat {
-  width: 300px;
-  margin: 20px auto;
-  border: 1px solid #ccc;
-  background-color: #1f1f1f;
-  color: #eee;
-  border-radius: 5px;
-  overflow: hidden;
-  font-family: Arial, sans-serif;
-}
-
-/* Estilos para los mensajes */
-.caja-chat {
-  width: 75%;
+  width: 200px;
   height: 400px;
   background-color: #292929;
   overflow-y: scroll;
