@@ -25,6 +25,7 @@
 /* Estilos para el contenedor del chat */
 .contenedor-chat {
   width: 300px;
+  height: 250px;
   margin: 20px auto;
   position: absolute;
   top: 5px; left: 300px;

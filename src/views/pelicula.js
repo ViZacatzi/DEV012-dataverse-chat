@@ -10,7 +10,10 @@ export const pelicula = (movieName) => {
     contenidoPelicula.classList.add("tarjeta-pelicula");
     contenidoPelicula.setAttribute("itemtype", "peliculas");
     contenidoPelicula.innerHTML = ` 
+              <div>
               <img class="imagen-pelicula" src="${peliculaEncontrada.imageUrl}">
+              <div id="contenedorChat"></div>
+              </div>
               <div> <dt>Nombre:</dt><dd itemprop="name">${peliculaEncontrada.name}</dd>
               <dt>description:</dt><dd itemprop="description">${peliculaEncontrada.description}</dd>
               <dt>genre:</dt><dd itemprop="genre">${peliculaEncontrada.genre}</dd>
@@ -18,7 +21,7 @@ export const pelicula = (movieName) => {
               <dt>director:</dt><dd itemprop="director">${peliculaEncontrada.facts.director}</dd>
               <dt>mainActors:</dt><dd itemprop="mainActors">${peliculaEncontrada.facts.mainActors}</dd>
               <button id="abrirChat">Abrir Chat</button>
-              <div id="contenedorChat"></div>
+              
         `;
     const contenedorChat = contenidoPelicula.querySelector("#contenedorChat");
     const botonAbrirChat = contenidoPelicula.querySelector("#abrirChat");
