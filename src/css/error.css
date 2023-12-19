@@ -6,10 +6,11 @@
   display: flex;
   object-fit: contain;
   justify-content: center;
+  border: black solid 7px;
 }
 
-.boton-regresar {
-  /* Agrega estilos para el botón de regresar aquí */
+/*.boton-regresar{
+   Agrega estilos para el botón de regresar aquí 
   background-color: #424242;
   color: rgb(8, 8, 8);
   font-family: western;
@@ -17,7 +18,8 @@
   font-size: 20px;
   padding: 30px;
   cursor: pointer;
-}
+  align-items: center;
+}*/
 
 .contenedor-imagen {
   margin-left: 35%;

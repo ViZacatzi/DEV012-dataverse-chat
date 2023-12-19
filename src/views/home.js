@@ -102,9 +102,9 @@ export const Home = () => {
 
   // Evento para darle funcionamiento al boton de api
   buttonApi.addEventListener("click", () => {
-  navigateTo(`/apikey`);
+    navigateTo(`/apikey`);
   });
-  
+
   return homeview;
 };
 
@@ -139,7 +139,7 @@ const filtros = () => {
 
 <div>
   <label for="button-api-key"></label>
-   <button data-testid="button-api-key">API-KEY</button>
+   <button data-testid="button-api-key" class="button-api-key">API-KEY</button>
 </div>
 
 <div class="filtros" id="estadistica">
