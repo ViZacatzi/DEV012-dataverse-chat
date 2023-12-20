@@ -1,12 +1,14 @@
+import { navigateTo } from "../router.js";
 export const chat = () => {
+
   const chatElement = document.createElement("div");
-
+  
   // Agregar el contenido al elemento header
-  chatElement.innerHTML = `<div class="vista-chat">
+  chatElement.innerHTML = `
   
 
   
-  </div>
+  
   <div class="contenedor-chat">
     <div class="caja-chat">
       <div class="message entrada">
@@ -27,7 +29,11 @@ export const chat = () => {
 `;
   const botonRegresar = chatElement.querySelector(".boton-chat");
 
-  botonRegresar.addEventListener("click", () => {});
+  botonRegresar.addEventListener("click", () => {
+    navigateTo(`/`);
+  });
+  
+
 
   return chatElement;
 };
