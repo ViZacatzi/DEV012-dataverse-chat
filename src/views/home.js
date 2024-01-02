@@ -132,19 +132,19 @@ const filtros = () => {
     </select>
 </div> 
 
+<div class="filtros" id="estadistica">
+  <label class="texto">Total de películas de terror: </label>
+    <span id="peliculasDeTerror"></span>
+</div>
+
 <div>
   <label for="borrar"></label>
    <button data-testid="button-clear">Borrar</button>
 </div>
 
-<div>
-  <label for="button-api-key"></label>
+<div class="div-api">
+  <label for="button-api-key" class="texto">Para chatear con tus personajes favoritos ingresa tu clave </label>
    <button data-testid="button-api-key" class="button-api-key">API-KEY</button>
-</div>
-
-<div class="filtros" id="estadistica">
-  <label class="texto">Total de películas de terror: </label>
-    <span id="peliculasDeTerror"></span>
 </div>`;
 
   return elementofiltros;

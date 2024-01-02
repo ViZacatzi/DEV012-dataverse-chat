@@ -26,8 +26,6 @@ div {
       Esto funciona cuando estás utilizando el modelo de diseño flexbox. */
 }
 .filtros {
-  margin-right: 35px;
-  margin-left: 20px;
   font-family: western;
 }
 
@@ -37,8 +35,9 @@ h1 {
   background-color: black; /* Establece el fondo del encabezado en negro. */
   text-align: center; /* Centra el texto dentro del elemento h1. */
   font-family: western; /* Establece la fuente del texto. Es posible que necesites proporcionar una fuente llamada "western". */
-  font-size: 40px; /* Establece el tamaño de la fuente en 40 píxeles. */
-  padding: 10px;
+  font-size: 50px; /* Establece el tamaño de la fuente en 40 píxeles. */
+  padding: 25px;
+  margin: 0px;
 }
 
 /* Estilos para los select (filtros) */
@@ -54,6 +53,8 @@ select {
   width: 150px; /* Establece el ancho del select en 150 píxeles. */
   border-radius: 2rem; /* Establece un borde redondeado con un radio de 2 unidades. */
   align-items: center; /* Alinea los elementos dentro del select en el centro. */
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /* Estilos para la estadística */
@@ -65,7 +66,8 @@ select {
   justify-content: center; /* Centra el contenido horizontalmente dentro del contenedor. */
   flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una línea. */
   flex-direction: initial; /* Establece la dirección del eje principal del contenedor (en este caso, la dirección inicial). */
-  margin: auto; /* Establece un margen automático para centrar el contenedor. */
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /* Estilos para los select (filtros) */
@@ -81,6 +83,9 @@ select {
   width: 150px; /* Establece el ancho del select en 150 píxeles. */
   border-radius: 2rem; /* Establece un borde redondeado con un radio de 2 unidades. */
   align-items: center; /* Alinea los elementos dentro del select en el centro. */
+  box-shadow: 0 0 15px rgb(209, 0, 0);
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /* Estilos para los botones */
@@ -91,11 +96,11 @@ button {
   width: 150px; /* Establece el ancho del botón en 150 píxeles. */
   border-radius: 2rem; /* Establece un borde redondeado con un radio de 2 unidades. */
   align-items: center; /* Alinea los elementos dentro del botón en el centro. */
+  box-shadow: 0 0 15px rgb(209, 0, 0);
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-button:hover {
-  box-shadow: 0 0 15px rgb(233, 21, 71);
-}
 
 /* Estilos para los elementos dt (nombres de películas) */
 dt {
@@ -136,9 +141,7 @@ img {
   flex-grow: 1px; /* Permite que la imagen crezca proporcionalmente con otros elementos flexibles. */
   flex-basis: 200px; /* Establece el tamaño base de la imagen en 200 píxeles. */
   overflow: hidden; /* Oculta cualquier contenido que exceda las dimensiones especificadas. */
-  filter: grayscale(
-    1
-  ); /* Aplica un filtro de escala de grises a la imagen (totalmente gris). */
+  filter: grayscale(1); /* Aplica un filtro de escala de grises a la imagen (totalmente gris). */
   transition: 0.5s; /* Aplica una transición suave durante 0.5 segundos a cambios en la imagen. */
 }
 
@@ -165,6 +168,7 @@ img:hover {
 /* Estilos para el encabezado y pie de página */
 header {
   display: block; /* Establece el valor de visualización del elemento header como bloque. */
+  
 }
 
 footer {
@@ -205,14 +209,14 @@ ul {
 
 /* Aplicar flexbox para colocar los elementos en línea y centrarlos verticalmente */
 main {
+  background-color: black;
+  height: 120px;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
+  margin-top: 1px;
+  padding: 20px;
+
 }
 
-#Genero {
-  color: rgb(236, 236, 17);
-}
-.button-api-key {
-  margin-left: 30px;
-}

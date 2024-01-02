@@ -59,6 +59,31 @@ export const apikeyelement = () => {
                               
 </div>
   `;
+// en esta variable se va a almacenar la APIKEY
+let apiKey = ''; 
+
+function guardarApiKey() {
+  const usuario = document.getElementById('user').value;
+  const apiIngresada = document.getElementById('api').value;
+
+  if (usuario !== '' && apiIngresada !== '') {
+    apiKey = apiIngresada;
+    // Puedes guardar el usuario también si es necesario
+    // const nombreUsuario = usuario;
+
+    // Llamar a la función para enviar mensajes al chat (puede variar dependiendo de tu estructura)
+    // enviarMensaje();
+
+    // Aquí puedes hacer lo que sea necesario con la APIKEY ingresada por el usuario
+    console.log('APIKEY guardada:', apiKey);
+
+    // Llamar a una función que use fetch con la apiKey
+    usarFetchConApiKey(apiKey);
+  } else {
+    alert('Por favor ingresa tu nombre y tu APIKEY');
+  }
+}
+
 
   return elementoApi;
 };
