@@ -113,9 +113,9 @@ const filtros = () => {
   const elementofiltros = document.createElement("main");
   elementofiltros.innerHTML = `
 <div class="filtros">
-  <label class="texto" for="filtros">Género</label>
+  <label class="texto" for="filtros"></label>
   <select name="filtros" id="filtros" data-testid="select-filter">
-    <option name="seleccion" value="seleccion">-selecciona-</option>
+    <option name="seleccion" value="seleccion">-GENERO-</option>
     <option value="Terror">Terror</option>
     <option value="Ciencia Ficción">Ciencia Ficción</option>
     <option value="Thriller">Thriller</option>
@@ -124,9 +124,9 @@ const filtros = () => {
 </div>
 
 <div class="filtros">
-  <label class="texto" for="ordenamiento">Orden alfabetico</label>
+  <label class="texto" for="ordenamiento"></label>
     <select name="ordenamiento" id="ordenamiento" data-testid="select-ordenamiento">
-      <option name="seleccion" value="seleccion">-selecciona-</option>
+      <option name="seleccion" value="seleccion">-ORDENAMIENTO-</option>
       <option value="asc">A - Z</option>
       <option value="desc">Z - A</option>
     </select>
