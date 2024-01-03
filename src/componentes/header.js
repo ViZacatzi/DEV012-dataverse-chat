@@ -3,7 +3,7 @@ export const header = () => {
   const headerElement = document.createElement('header');
 
   // Agregar el contenido al elemento header
-  headerElement.innerHTML = `<h1 name="titulo">Peliculas basadas en libros de Stephen King</h1>`;
+  headerElement.innerHTML = `<h1 name="titulo">StephenFilmVerse</h1>`;
 
   return headerElement;
 };
