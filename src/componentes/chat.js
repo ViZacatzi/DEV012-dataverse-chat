@@ -22,6 +22,13 @@ export const chat = () => {
     navigateTo(`/`);
   });
 
+  chatRequest(apiIngresada, {
+    model: "gpt-3.5-turbo",
+    messages: []
+  }).then(() => {
+    
+  })
+
   function enviarMensaje() {
     const mensajeInput = document.querySelector("#mensajeInput");
     const mensaje = mensajeInput.value.trim();
@@ -35,20 +42,6 @@ export const chat = () => {
 
       mensajeInput.value = ""; // Limpiar el input después de enviar el mensaje
       
-      try {
-        // Enviar el mensaje a la API de la IA
-        const respuestaIA = chatRequest(apiIngresada, mensaje); // Función para enviar el mensaje a la IA
-  
-        // Mostrar la respuesta de la IA en el chat como 'entrada'
-        const nuevoMensajeIA = document.createElement("div");
-        nuevoMensajeIA.classList.add("message", "entrada");
-        nuevoMensajeIA.innerHTML = `<p>${respuestaIA}</p>`;
-        cajaChat.appendChild(nuevoMensajeIA);
-      } catch (error) {
-        console.error("Error al obtener la respuesta de la IA:", error);
-        // Manejar el error, mostrar un mensaje de error, etc.
-      }
-
     }
   }
 

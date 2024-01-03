@@ -1,6 +1,7 @@
 import { footer } from "../componentes/footer.js";
 import { navigateTo } from "../router.js";
 import { chat } from "../componentes/chat.js";
+import { chatRequest } from "../Lib/requestAPI.js";
 
 export const ApiKey = () => {
   //crea el div que va a contener la vista Api-Key
@@ -33,9 +34,10 @@ export const ApiKey = () => {
     apiKey = "";
   });
 
-buttonAceptar.addEventListener("click", () => {
+
   // en esta variable se va a almacenar la APIKEY
 let apiKey = ""; 
+let nombreUsuario = "";
 
 function guardarApiKey() {
   const usuario = document.querySelector("#user").value;
@@ -43,21 +45,26 @@ function guardarApiKey() {
 
   if (usuario !== "" && apiIngresada !== "") {
     apiKey = apiIngresada; // Guarda la apiKey que ingresa el usuario
-    const nombreUsuario = usuario; // Guarda el numbre del usuario
+    nombreUsuario = usuario; // Guarda el numbre del usuario
 
-    // Llamar a la función para enviar mensajes al chat
-    chat();
+   //utilizar la función del chat para que ahi envie los mensajes
     
-    // Aquí puedes hacer lo que sea necesario con la APIKEY ingresada por el usuario
+    
+    // Checar si esta guardando la api
     console.log('APIKEY guardada:', apiKey);
+    console.log('Usuario guardado:', nombreUsuario);
+
 
     // Llamar a una función que use fetch con la apiKey
-    usarFetchConApiKey(apiKey);
+    // Llamar a la función para enviar validar la  api-key
+    chatRequest(apiKey);
   } else {
     alert('Por favor ingresa tu nombre y tu APIKEY');
   }
 };
-});
+
+//función del boton aceptar para que al hacer click llame a la función
+apikeyview.querySelector(".boton-api").addEventListener("click", guardarApiKey);
 
 return apikeyview;
 };
