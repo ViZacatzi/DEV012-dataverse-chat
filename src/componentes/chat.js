@@ -1,4 +1,6 @@
 import { navigateTo } from "../router.js";
+import { chatRequest } from "../Lib/requestAPI.js"
+
 export const chat = () => {
   const chatElement = document.createElement("div");
 
@@ -26,18 +28,31 @@ export const chat = () => {
 
     if (mensaje !== "") {
       const cajaChat = document.querySelector(".caja-chat");
-      const nuevoMensaje = document.createElement("div");
-      nuevoMensaje.classList.add("message", "saliendo");
-      nuevoMensaje.innerHTML = `<p>${mensaje}</p>`;
-      cajaChat.appendChild(nuevoMensaje);
+      const nuevoMensajeUsuario = document.createElement("div");
+      nuevoMensajeUsuario.classList.add("message", "saliendo");
+      nuevoMensajeUsuario.innerHTML = `<p>${mensaje}</p>`;
+      cajaChat.appendChild(nuevoMensajeUsuario);
 
       mensajeInput.value = ""; // Limpiar el input después de enviar el mensaje
+      
+      try {
+        // Enviar el mensaje a la API de la IA
+        const respuestaIA = chatRequest(apiIngresada, mensaje); // Función para enviar el mensaje a la IA
+  
+        // Mostrar la respuesta de la IA en el chat como 'entrada'
+        const nuevoMensajeIA = document.createElement("div");
+        nuevoMensajeIA.classList.add("message", "entrada");
+        nuevoMensajeIA.innerHTML = `<p>${respuestaIA}</p>`;
+        cajaChat.appendChild(nuevoMensajeIA);
+      } catch (error) {
+        console.error("Error al obtener la respuesta de la IA:", error);
+        // Manejar el error, mostrar un mensaje de error, etc.
+      }
+
     }
   }
 
-  chatElement
-    .querySelector("#enviarMensaje")
-    .addEventListener("click", enviarMensaje);
+  chatElement.querySelector("#enviarMensaje").addEventListener("click", enviarMensaje);
 
   return chatElement;
 };

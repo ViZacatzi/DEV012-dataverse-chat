@@ -1,13 +1,14 @@
 
-export const chatRequest = (APIKEY, data) => {
+export const chatRequest = (apiIngresada, mensaje) => {
 
     return fetch ("https://api.openai.com/v1/chat/completions", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": `Bearer ${APIKEY}`,
+            "Authorization": `Bearer ${apiIngresada}`,
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(mensaje),
     })
-    }
+    };
+    
 
