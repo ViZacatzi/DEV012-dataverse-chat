@@ -47,17 +47,14 @@ function guardarApiKey() {
     apiKey = apiIngresada; // Guarda la apiKey que ingresa el usuario
     nombreUsuario = usuario; // Guarda el numbre del usuario
 
-   //utilizar la función del chat para que ahi envie los mensajes
-    
-    
-    // Checar si esta guardando la api
-    console.log('APIKEY guardada:', apiKey);
-    console.log('Usuario guardado:', nombreUsuario);
+    // Almacenar en localStorage
+    localStorage.setItem('apiKey', apiKey);
+    alert('Tu Api-Key ya esta guardada, puedes ir a chatear con tus personajes favoritos');
+    // Iniciar el componente de chat
+    //const chatComponent = chat(apiKey);
+    //console.log(chatComponent)
+    // Agregar chatComponent al DOM o realizar cualquier acción necesaria
 
-
-    // Llamar a una función que use fetch con la apiKey
-    // Llamar a la función para enviar validar la  api-key
-    chatRequest(apiKey);
   } else {
     alert('Por favor ingresa tu nombre y tu APIKEY');
   }
