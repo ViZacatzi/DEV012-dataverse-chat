@@ -42,7 +42,15 @@ export const chat = () => {
     } try {
 
       // Enviar el mensaje a la API de la IA
-      const respuestaIA = chatRequest(apiKey, { model: "gpt-3.5-turbo", messages: [{ role: "user", content: mensaje }] }); // Función para enviar el mensaje a la IA
+      const respuestaIA = chatRequest(apiKey, { model: "gpt-3.5-turbo", messages: [{ 
+        role: "system",
+        content: "Tu eres el personaje principal de la pelicula Carrie."
+      },
+      {
+        role: "user",
+        content: "Hola, quien eres?"
+      }] }); 
+    // Función para enviar el mensaje a la IA
     // Verifica el código de respuesta antes de acceder a la respuesta
 if (respuestaIA && respuestaIA.choices && respuestaIA.choices[0] && respuestaIA.choices[0].message) {
       // Mostrar la respuesta de la IA en el chat como 'entrada'
