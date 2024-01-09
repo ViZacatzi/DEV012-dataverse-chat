@@ -8,7 +8,23 @@ export const chatRequest = (apiKey, mensaje) => {
             "Authorization": `Bearer ${apiKey}`,
         },
         body: JSON.stringify(mensaje),
+       
     })
-    };
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error al realizar la solicitud');
+        }
+        return response.json();
+    })
+    .catch(error => {
+        console.error('Error en la solicitud:', error);
+        throw error;
+    });
+};
     
+      
+        
+     
+
+   
 
