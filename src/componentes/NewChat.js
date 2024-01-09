@@ -19,7 +19,7 @@ export const chat = () => {
     navigateTo(`/`);
   });
   let apiKey = localStorage.getItem("apiKey")
-  async function enviarMensaje() {
+  function enviarMensaje() {
     const mensajeInput = document.querySelector("#mensajeInput");
     const mensaje = mensajeInput.value.trim();
     if (mensaje !== "") {
@@ -29,9 +29,9 @@ export const chat = () => {
       nuevoMensajeUsuario.innerHTML = `<p>${mensaje}</p>`;
       cajaChat.appendChild(nuevoMensajeUsuario);
       mensajeInput.value = ""; // Limpiar el input después de enviar el mensaje
-    } try {
+    } 
       // Enviar el mensaje a la API de la IA
-      const respuestaIA = await chatRequest(apiKey, {
+      const respuestaIA = chatRequest(apiKey, {
          model: "gpt-3.5-turbo",
           messages: [{ 
         role: "system",
@@ -41,26 +41,23 @@ export const chat = () => {
         role: "user",
         content: "Hola, quien eres?"
       }]
-     }).then(responseIAjs => {
-      
-      console.log(responseIAjs);
-      
-             
-if (respuestaIA && respuestaIA.choices && respuestaIA.choices[0] && respuestaIA.choices[0].message) {
+     })
+     respuestaIA.then(responseIAjs => {
+
+      // if (responseIAjs && responseIAjs.choices && responseIAjs.choices[0] && respuestaIA.choices[0].message) {
       // Mostrar la respuesta de la IA en el chat como 'entrada'
       const nuevoMensajeIA = document.createElement("div");
       nuevoMensajeIA.classList.add("message", "entrada");
-      nuevoMensajeIA.innerHTML = `<p>${respuestaIA.choices[0].message.content}</p>`;
+      nuevoMensajeIA.innerHTML = `<p>${responseIAjs.choices[0].message.content}</p>`;
+      const cajaChat = document.querySelector(".caja-chat");
       cajaChat.appendChild(nuevoMensajeIA);
+  
       
-    } else {
-      console.error("La respuesta de la IA no tiene el formato esperado:", respuestaIA);
-    }
-     });
-    } catch (error) {
-      console.error("Error al obtener la respuesta de la IA:", error);
-      // Manejar el error, mostrar un mensaje de error, etc.
-    }
+      console.log(responseIAjs);
+       }  )
+    .catch(err=>{
+      console.log('2024 ya acabate', err);
+    })
   }
     
   chatElement.querySelector("#enviarMensaje").addEventListener("click", enviarMensaje);
