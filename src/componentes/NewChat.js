@@ -31,17 +31,7 @@ export const chat = () => {
       mensajeInput.value = ""; // Limpiar el input después de enviar el mensaje
     } 
       // Enviar el mensaje a la API de la IA
-      const respuestaIA = chatRequest(apiKey, {
-         model: "gpt-3.5-turbo",
-          messages: [{ 
-        role: "system",
-        content: "Tu eres el personaje principal de la pelicula Carrie."
-      },
-      {
-        role: "user",
-        content: "Hola, quien eres?"
-      }]
-     })
+      const respuestaIA = chatRequest(apiKey, mensaje)
      respuestaIA.then(responseIAjs => {
 
       // if (responseIAjs && responseIAjs.choices && responseIAjs.choices[0] && respuestaIA.choices[0].message) {

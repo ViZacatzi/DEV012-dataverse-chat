@@ -1,5 +1,19 @@
+import data from "../data/dataset.js";
 
-export const chatRequest = (apiKey, mensaje) => {
+let peliculas = data.name
+
+const requestBody = {
+    model: "gpt-3.5-turbo",
+     messages: [{ 
+   role: "system",
+   content: `Tu eres el personaje principal de la pelicula + ${peliculas}.`
+ },
+ {
+   role: "user",
+   content: "Hola, quien eres?"
+ }]
+}
+export const chatRequest = (apiKey, mensaje, movieName) => {
 
     return fetch ("https://api.openai.com/v1/chat/completions", {
         method: "POST",
@@ -7,8 +21,8 @@ export const chatRequest = (apiKey, mensaje) => {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${apiKey}`,
         },
-        body: JSON.stringify(mensaje),
-       
+        body: JSON.stringify(requestBody),
+        
     })
     .then(response => {
         if (!response.ok) {
