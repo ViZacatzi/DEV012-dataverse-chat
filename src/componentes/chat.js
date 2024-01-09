@@ -18,8 +18,12 @@ export const chat = () => {
   botonRegresar.addEventListener("click", () => {
     navigateTo(`/`);
   });
+
+
   let apiKey = localStorage.getItem("apiKey")
-  async function enviarMensaje() {
+
+
+  function enviarMensaje() {
     const mensajeInput = document.querySelector("#mensajeInput");
     const mensaje = mensajeInput.value.trim();
     if (mensaje !== "") {
@@ -29,37 +33,7 @@ export const chat = () => {
       nuevoMensajeUsuario.innerHTML = `<p>${mensaje}</p>`;
       cajaChat.appendChild(nuevoMensajeUsuario);
       mensajeInput.value = ""; // Limpiar el input después de enviar el mensaje
-    } try {
-      // Enviar el mensaje a la API de la IA
-      const respuestaIA = await chatRequest(apiKey, {
-         model: "gpt-3.5-turbo",
-          messages: [{ 
-        role: "system",
-        content: "Tu eres el personaje principal de la pelicula Carrie."
-      },
-      {
-        role: "user",
-        content: "Hola, quien eres?"
-      }]
-     }).then(responseIAjs => {
       
-      console.log(responseIAjs);
-      
-             
-if (respuestaIA && respuestaIA.choices && respuestaIA.choices[0] && respuestaIA.choices[0].message) {
-      // Mostrar la respuesta de la IA en el chat como 'entrada'
-      const nuevoMensajeIA = document.createElement("div");
-      nuevoMensajeIA.classList.add("message", "entrada");
-      nuevoMensajeIA.innerHTML = `<p>${respuestaIA.choices[0].message.content}</p>`;
-      cajaChat.appendChild(nuevoMensajeIA);
-      
-    } else {
-      console.error("La respuesta de la IA no tiene el formato esperado:", respuestaIA);
-    }
-     });
-    } catch (error) {
-      console.error("Error al obtener la respuesta de la IA:", error);
-      // Manejar el error, mostrar un mensaje de error, etc.
     }
   }
     
