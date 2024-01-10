@@ -1,6 +1,9 @@
 import { navigateTo } from "../router.js";
 import { chatRequest } from "../Lib/requestAPI.js"
-export const chat = () => {
+
+
+export const chat = (pelicula) => {
+  console.log(pelicula)
   const chatElement = document.createElement("div");
   // Agregar el contenido al elemento header
   chatElement.innerHTML = `
@@ -31,7 +34,7 @@ export const chat = () => {
       mensajeInput.value = ""; // Limpiar el input después de enviar el mensaje
     } 
       // Enviar el mensaje a la API de la IA
-      const respuestaIA = chatRequest(apiKey, mensaje)
+      const respuestaIA = chatRequest(apiKey, mensaje, pelicula.name)
      respuestaIA.then(responseIAjs => {
 
       // if (responseIAjs && responseIAjs.choices && responseIAjs.choices[0] && respuestaIA.choices[0].message) {

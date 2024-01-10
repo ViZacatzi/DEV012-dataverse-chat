@@ -30,7 +30,7 @@ export const pelicula = (movieName) => {
 
     botonAbrirChat.addEventListener("click", () => {
       contenedorChat.innerHTML = ""; // Limpia el contenedor antes de agregar la vista
-      contenedorChat.appendChild(chat());
+      contenedorChat.appendChild(chat(peliculaEncontrada));
     });
 
     return contenidoPelicula;

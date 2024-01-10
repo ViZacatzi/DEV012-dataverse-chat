@@ -57,6 +57,7 @@ export const Home = () => {
       navigateTo(`/pelicula/${movieName}`, movieName);
     });
   });
+
   // Aqui agregamos el componente de footer al div de la vista homeview
   const footerComponent = footer();
   homeview.appendChild(footerComponent);
