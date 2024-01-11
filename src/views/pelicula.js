@@ -1,6 +1,6 @@
 import { footer } from "../componentes/footer.js";
 import data from "../data/dataset.js";
-import { chat } from "../componentes/NewChat.js";
+import { chat } from "../componentes/chat.js";
 
 export const pelicula = (movieName) => {
   const peliculaEncontrada = data.find((content) => content.name === movieName);
