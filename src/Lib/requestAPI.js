@@ -8,7 +8,7 @@ export const chatRequest = (apiKey, mensaje, tituloPelicula) => {
       },
       {
         role: "user",
-        content: "Hola, quien eres?",
+        content: `contesta a la siguiente pregunta:${mensaje}`,
       },
     ],
   };

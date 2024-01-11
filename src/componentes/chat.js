@@ -45,8 +45,8 @@ export const chat = (pelicula) => {
         const cajaChat = document.querySelector(".caja-chat");
         cajaChat.appendChild(nuevoMensajeIA);
       })
-      .catch((err) => {
-        console.log("2024 ya acabate", err);
+      .catch((error) => {
+        console.error("Error al obtener la respuesta de la IA:", error);
       });
   }
 
