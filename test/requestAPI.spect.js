@@ -1,6 +1,5 @@
 import { chatRequest } from "../src/Lib/requestAPI.js";
 
-
 const respuestaIA = jest
   .fn()
   .mockResolvedValueOnce({ choices: [{ message: "foo" }] });
@@ -44,9 +43,10 @@ describe("chatRequest", () => {
     };
     respuestaIA.mockResolvedValueOnce(respuesta);
 
-    return chatRequest("11111" [{role:"user", content:"foo"}])
-    .then((resolved) => {
+    return chatRequest("11111"[{ role: "user", content: "foo" }]).then(
+      (resolved) => {
         expect(resolved).tobe(respuesta);
-    });
+      }
+    );
   });
 });

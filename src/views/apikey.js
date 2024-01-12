@@ -2,24 +2,25 @@ import { footer } from "../componentes/footer.js";
 import { navigateTo } from "../router.js";
 
 export const ApiKey = () => {
-
   //crea el div que va a contener la vista Api-Key
   const div = document.createElement("div");
   const apikeyview = div;
-  
+
   const apikeyComponent = apikeyelement();
   apikeyview.appendChild(apikeyComponent);
-  
+
   const footerComponent = footer();
   apikeyview.appendChild(footerComponent);
-  
+
   //llamar a los botones
   const inputUser = apikeyview.querySelector("#user");
   const inputApi = apikeyview.querySelector("#api");
   const buttonHome = apikeyview.querySelector("[data-testid='button-home']");
-  const buttonApiBorrar = apikeyview.querySelector("[data-testid='button-api-borrar']");
-  const buttonAceptar = apikeyview.querySelector(".boton-api")
-  
+  const buttonApiBorrar = apikeyview.querySelector(
+    "[data-testid='button-api-borrar']"
+  );
+  const buttonAceptar = apikeyview.querySelector(".boton-api");
+
   //función del boton Home para que el boton regrese a la vista Home
   buttonHome.addEventListener("click", () => {
     navigateTo(`/`);
@@ -34,36 +35,35 @@ export const ApiKey = () => {
 
   // en esta variable se va a almacenar la APIKEY
   let apiKey = "";
-  let nombreUsuario = "";
+  //let nombreUsuario = "";
 
   function guardarApiKey() {
     const usuario = document.querySelector("#user").value;
     const apiIngresada = document.querySelector("#api").value;
     if (usuario !== "" && apiIngresada !== "") {
+      //Guarda la apiKey que ingresa el usuario
+      apiKey = apiIngresada;
+      //Guarda el numbre del usuario
+      //nombreUsuario = usuario;
 
-    //Guarda la apiKey que ingresa el usuario
-    apiKey = apiIngresada; 
-    //Guarda el numbre del usuario
-    nombreUsuario = usuario;
-
-    // Almacenar en localStorage
-    localStorage.setItem('apiKey', apiKey);
-    alert('Tu Api-Key ya esta guardada, puedes ir a chatear con tus personajes favoritos');
-
+      // Almacenar en localStorage
+      localStorage.setItem("apiKey", apiKey);
+      alert(
+        "Tu Api-Key ya esta guardada, puedes ir a chatear con tus personajes favoritos"
+      );
     } else {
-    alert('Por favor ingresa tu nombre y tu APIKEY');
+      alert("Por favor ingresa tu nombre y tu APIKEY");
     }
-  };
+  }
 
   buttonAceptar.addEventListener("click", () => {
-    guardarApiKey()
+    guardarApiKey();
     inputUser.value = "";
     inputApi.value = "";
   });
 
-return apikeyview;
+  return apikeyview;
 };
-
 
 //función que crea el html de apikeyelement para que pinte la vista
 export const apikeyelement = () => {
@@ -86,10 +86,3 @@ export const apikeyelement = () => {
     </div>`;
   return elementoApi;
 };
-
-
-
-
-
-
-

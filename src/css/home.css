@@ -205,6 +205,7 @@ ul {
   flex-wrap: wrap;
   padding: 10px;
   gap: 24px;
+  margin-left: 95px;
 }
 
 /* Aplicar flexbox para colocar los elementos en línea y centrarlos verticalmente */

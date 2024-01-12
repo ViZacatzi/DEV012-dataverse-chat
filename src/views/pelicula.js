@@ -1,4 +1,4 @@
-import { footer } from "../componentes/footer.js";
+//import { footer } from "../componentes/footer.js";
 import data from "../data/dataset.js";
 import { chat } from "../componentes/chat.js";
 

@@ -20,7 +20,7 @@ export const chat = (pelicula) => {
     navigateTo(`/`);
   });
 
-  let apiKey = localStorage.getItem("apiKey");
+  const apiKey = localStorage.getItem("apiKey");
 
   function enviarMensaje() {
     const mensajeInput = document.querySelector("#mensajeInput");
