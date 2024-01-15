@@ -20,15 +20,7 @@ export const chatRequest = (apiKey, mensaje, tituloPelicula) => {
       Authorization: `Bearer ${apiKey}`,
     },
     body: JSON.stringify(requestBody),
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Error al realizar la solicitud");
-      }
-      return response.json();
-    })
-    .catch((error) => {
-      console.error("Error en la solicitud:", error);
-      throw error;
-    });
+  }).then((response) => {
+    return response.json();
+  });
 };

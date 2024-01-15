@@ -46,6 +46,7 @@ export const chat = (pelicula) => {
         cajaChat.appendChild(nuevoMensajeIA);
       })
       .catch((error) => {
+        // eslint-disable-next-line no-console
         console.error("Error al obtener la respuesta de la IA:", error);
       });
   }

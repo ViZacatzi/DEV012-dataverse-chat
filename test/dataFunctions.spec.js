@@ -8,6 +8,7 @@ import { fakeDataAsc } from "./data.js";
 import { fakeDataDesc } from "./data.js";
 
 
+
 describe("Funciones de Filtrado y Ordenamiento", () => {
   // Pruebas para la función de filtrado por género
   describe("filterMoviesByGenre", () => {
@@ -41,6 +42,5 @@ describe("calcularEstadistica", () => {
     expect(peliculasDeTerror).toBe(3);
   });
 });
-
 
 
