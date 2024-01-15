@@ -1,7 +1,6 @@
-# StephenFilmVerse Chat 
+# StephenFilmVerse Chat
 
 ## Índice
-
 
 * [1. Definición del producto](#1-definicion-del-producto)
 * [2. Historias de usuaria](#2-historias-de-usuaria)
@@ -29,6 +28,7 @@ su usabilidad.
 
 ## 2. Historias de usuaria
 
+
 Esta página es dirigida para usuarias amantes de las películas de ciencia ficción,
 terror y thriller. Así como usuarias fans de Stephen King.
 
@@ -44,18 +44,22 @@ terror y thriller. Así como usuarias fans de Stephen King.
 4. En este proyecto la usuaria entrará a la ruta llamada Api-Key, donde podrá
    ingresar su clave API, esto para que pueda chatear con la IA.
 
-5. La usuaria al ingresar una URL que no reconozca la página la redirigira a
+5. En este proyecto la usuaria entrará a la ruta llamada Api-Key, donde podrá
+   ingresar su clave API, esto para que pueda chatear con la IA.
+
+6. La usuaria al ingresar una URL que no reconozca la página la redirigira a
    una vista de "error 404" donde tendra un boton que la devuelva a la vista
    principal.
 
 
+
 ## 3. Diseño de la Interfaz
 
-**Ya que retomamos el proyecto anterior
 
 Diseñamos la página siguiendo el estilo del proyecto anterior donde rescatamos
 de la interfaz los tonos obscuros, la imagen de fondo, los estilos de letra,
 agregando detalles dependiendo la necesidad de cada vista de la SPA.
+
 
   - Prototipo de alta fidelidad
 
@@ -64,7 +68,8 @@ agregando detalles dependiendo la necesidad de cada vista de la SPA.
   - ![captura_de_pantalla_2024-01-15_a_la_s__11 48 05___a m _720](https://github.com/ViZacatzi/DEV012-dataverse-chat/assets/144548383/ec7893ec-6381-4054-9142-4323e4095623)
 
 
-## 5. Problemas encontrados de usabilidad
+
+## 4. Problemas encontrados de usabilidad
 
 //Aqui habiamos visto algunos problemas al iniciar el diseño de la pagina,
 es decir, vimos que al ingresar a la pagina del detalle del personaje y al 
@@ -96,6 +101,7 @@ una Api-Key.
 
 ## 5. Implementación de la Interfaz de Usuaria (HTML/CSS/JS)
 
+
 **para la pagina utilizamos HTML para ingresar el titulo de la pagina, asi como un
 una imagen para icono para que se visualice en la parte superior de la pestaña. 
 Le dimos estilos a la vista de home, de igual manera a las otras 3 vistas desde CSS
@@ -112,3 +118,8 @@ en el localstorage, chat con personaje y las 4 rutas. Lo implementamos ulitizand
 
 
 ![captura_de_pantalla_2024-01-15_a_la_s__11 53 51___a m _720](https://github.com/ViZacatzi/DEV012-dataverse-chat/assets/144548383/17535cea-c85e-41f4-a12d-339823eb33ee)
+
+**Luego de diseñar tu interfaz de usuaria deberás trabajar en su implementación.
+**No** es necesario que construyas la interfaz exactamente como la diseñaste.
+Tu tiempo de hacking es escaso, así que deberás priorizar.
+
