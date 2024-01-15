@@ -12,7 +12,6 @@
 
 ## 1. Definición del producto
 
-
 Al ser una pagina SPA donde el reto era implementar diferentes vistas, primero 
 decidimos modificar un poco la primera vista del home ya que retomando al 
 el proyecto anterior nos gustó la interfaz que tenía así que solo hicimos 
@@ -27,7 +26,6 @@ Aunque cada vista tenia su propio diseño único que la caracteriza y resalta
 su usabilidad.
 
 
-
 ## 2. Historias de usuaria
 
 
@@ -36,17 +34,20 @@ terror y thriller. Así como usuarias fans de Stephen King.
 
 1. Igual que en el proyecto anterior la usuaria podrá filtrar, ordenar y ver una
    estadistica de las péliculas presentadas en la página.
-
+   
 2. En este proyecto la usuaria además podra ingresar a cada pélicula y ver la
    descripción de la pélicula seleccionada.
-   
-4. En la vista del detalle de cada pélicula, la usuaria podrá chatear con el
+
+3. En la vista del detalle de cada pélicula, la usuaria podrá chatear con el
    personaje principal de cada película y este tendrá que responder.
-   
-6. En este proyecto la usuaria entrará a la ruta llamada Api-Key, donde podrá
+
+4. En este proyecto la usuaria entrará a la ruta llamada Api-Key, donde podrá
    ingresar su clave API, esto para que pueda chatear con la IA.
 
-7. La usuaria al ingresar una URL que no reconozca la página la redirigira a
+5. En este proyecto la usuaria entrará a la ruta llamada Api-Key, donde podrá
+   ingresar su clave API, esto para que pueda chatear con la IA.
+
+6. La usuaria al ingresar una URL que no reconozca la página la redirigira a
    una vista de "error 404" donde tendra un boton que la devuelva a la vista
    principal.
 
@@ -54,13 +55,19 @@ terror y thriller. Así como usuarias fans de Stephen King.
 
 ## 3. Diseño de la Interfaz
 
+
 Diseñamos la página siguiendo el estilo del proyecto anterior donde rescatamos
 de la interfaz los tonos obscuros, la imagen de fondo, los estilos de letra,
 agregando detalles dependiendo la necesidad de cada vista de la SPA.
 
-## Prototipo de alta fidelidad
 
-**Ya que retomamos el proyecto anterior
+  - Prototipo de alta fidelidad
+
+  - ![283193325-ba9b6bff-f8d6-4a81-94e5-9d353b95368e](https://github.com/ViZacatzi/DEV012-dataverse-chat/assets/144548383/7ca9086f-ce09-4a91-902a-1e507d0cf8c5)
+  - ![captura_de_pantalla_2024-01-15_a_la_s__8 34 16___a m _720](https://github.com/ViZacatzi/DEV012-dataverse-chat/assets/144548383/ff5e327f-7317-44b4-8984-cecdce79d7f1)
+  - ![captura_de_pantalla_2024-01-15_a_la_s__11 48 05___a m _720](https://github.com/ViZacatzi/DEV012-dataverse-chat/assets/144548383/ec7893ec-6381-4054-9142-4323e4095623)
+
+
 
 ## 4. Problemas encontrados de usabilidad
 
@@ -94,6 +101,25 @@ una Api-Key.
 
 ## 5. Implementación de la Interfaz de Usuaria (HTML/CSS/JS)
 
+
+**para la pagina utilizamos HTML para ingresar el titulo de la pagina, asi como un
+una imagen para icono para que se visualice en la parte superior de la pestaña. 
+Le dimos estilos a la vista de home, de igual manera a las otras 3 vistas desde CSS
+respetando el estilo que ya teniamos en el anterior proyecto.
+Todo lo referente a funcionalidad de:
+filtros, ordenamiento, boton para borrar, guardar apikey 
+en el localstorage, chat con personaje y las 4 rutas. Lo implementamos ulitizando JS 
+
+![captura_de_pantalla_2024-01-15_a_la_s__11 51 54___a m _720](https://github.com/ViZacatzi/DEV012-dataverse-chat/assets/144548383/f47f094f-7552-456e-b881-9dd1b5995eef)
+
+![captura_de_pantalla_2024-01-15_a_la_s__11 52 04___a m _720](https://github.com/ViZacatzi/DEV012-dataverse-chat/assets/144548383/d3f9e173-a615-4e53-8466-ad3dfbaf6442)
+
+![captura_de_pantalla_2024-01-15_a_la_s__11 53 51___a m _720](https://github.com/ViZacatzi/DEV012-dataverse-chat/assets/144548383/34543837-21be-4738-9e4d-fbbb83ef850b)
+
+
+![captura_de_pantalla_2024-01-15_a_la_s__11 53 51___a m _720](https://github.com/ViZacatzi/DEV012-dataverse-chat/assets/144548383/17535cea-c85e-41f4-a12d-339823eb33ee)
+
 **Luego de diseñar tu interfaz de usuaria deberás trabajar en su implementación.
 **No** es necesario que construyas la interfaz exactamente como la diseñaste.
 Tu tiempo de hacking es escaso, así que deberás priorizar.
+
