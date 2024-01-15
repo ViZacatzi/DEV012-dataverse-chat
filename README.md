@@ -1,4 +1,4 @@
-# StephenFilmVerse Chat
+# StephenFilmVerse Chat 
 
 ## Índice
 
@@ -57,7 +57,14 @@ Diseñamos la página siguiendo el estilo del proyecto anterior donde rescatamos
 de la interfaz los tonos obscuros, la imagen de fondo, los estilos de letra,
 agregando detalles dependiendo la necesidad de cada vista de la SPA.
 
-## 4. Problemas encontrados de usabilidad
+  - Prototipo de alta fidelidad
+
+  - ![283193325-ba9b6bff-f8d6-4a81-94e5-9d353b95368e](https://github.com/ViZacatzi/DEV012-dataverse-chat/assets/144548383/7ca9086f-ce09-4a91-902a-1e507d0cf8c5)
+  - ![captura_de_pantalla_2024-01-15_a_la_s__8 34 16___a m _720](https://github.com/ViZacatzi/DEV012-dataverse-chat/assets/144548383/ff5e327f-7317-44b4-8984-cecdce79d7f1)
+  - ![captura_de_pantalla_2024-01-15_a_la_s__11 48 05___a m _720](https://github.com/ViZacatzi/DEV012-dataverse-chat/assets/144548383/ec7893ec-6381-4054-9142-4323e4095623)
+
+
+## 5. Problemas encontrados de usabilidad
 
 //Aqui habiamos visto algunos problemas al iniciar el diseño de la pagina,
 es decir, vimos que al ingresar a la pagina del detalle del personaje y al 
@@ -89,6 +96,19 @@ una Api-Key.
 
 ## 5. Implementación de la Interfaz de Usuaria (HTML/CSS/JS)
 
-**Luego de diseñar tu interfaz de usuaria deberás trabajar en su implementación.
+**para la pagina utilizamos HTML para ingresar el titulo de la pagina, asi como un
+una imagen para icono para que se visualice en la parte superior de la pestaña. 
+Le dimos estilos a la vista de home, de igual manera a las otras 3 vistas desde CSS
+respetando el estilo que ya teniamos en el anterior proyecto.
+Todo lo referente a funcionalidad de:
+filtros, ordenamiento, boton para borrar, guardar apikey 
+en el localstorage, chat con personaje y las 4 rutas. Lo implementamos ulitizando JS 
+
+![captura_de_pantalla_2024-01-15_a_la_s__11 51 54___a m _720](https://github.com/ViZacatzi/DEV012-dataverse-chat/assets/144548383/f47f094f-7552-456e-b881-9dd1b5995eef)
+
+![captura_de_pantalla_2024-01-15_a_la_s__11 52 04___a m _720](https://github.com/ViZacatzi/DEV012-dataverse-chat/assets/144548383/d3f9e173-a615-4e53-8466-ad3dfbaf6442)
+
+![captura_de_pantalla_2024-01-15_a_la_s__11 53 51___a m _720](https://github.com/ViZacatzi/DEV012-dataverse-chat/assets/144548383/34543837-21be-4738-9e4d-fbbb83ef850b)
 
 
+![captura_de_pantalla_2024-01-15_a_la_s__11 53 51___a m _720](https://github.com/ViZacatzi/DEV012-dataverse-chat/assets/144548383/17535cea-c85e-41f4-a12d-339823eb33ee)
