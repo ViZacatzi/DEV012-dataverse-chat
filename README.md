@@ -71,18 +71,15 @@ diseño más continuo.
 
 
 ![HomeSK](https://github.com/ViZacatzi/DEV012-dataverse-chat/assets/145049256/507f4f78-fd29-4f76-9e13-601ae12855ca)
-
-## Vista Home
+Vista Home
 
 
 <img width="1074" alt="Vista Chat" src="https://github.com/ViZacatzi/DEV012-dataverse-chat/assets/145049256/0cee7d7e-43f5-4acb-a0ef-673e10f8f19d">
-
-## Vista Chat
+Vista Chat
 
 
 <img width="922" alt="Vista Error" src="https://github.com/ViZacatzi/DEV012-dataverse-chat/assets/145049256/7dfdedda-4a4b-45e8-8794-ac564cd805fe">
-
-## Vista Error 404
+Vista Error 404
 
 
 
@@ -136,19 +133,19 @@ y finalmente el proyecto quedo así:
 
 
 <img width="1440" alt="HOME" src="https://github.com/ViZacatzi/DEV012-dataverse-chat/assets/145049256/929aa018-b397-449c-82a8-c42107bbd36d">
+Vista Home
 
-## Vista Home
 
 <img width="1440" alt="API-KEY" src="https://github.com/ViZacatzi/DEV012-dataverse-chat/assets/145049256/17b9ab87-1190-45c3-90e2-929eca5dcae3">
+Vista Api-Key
 
-## Vista Api-Key
 
 <img width="1440" alt="CHAT" src="https://github.com/ViZacatzi/DEV012-dataverse-chat/assets/145049256/de232fee-761e-4cc3-b222-9842e138f7ed">
+Vista Chat
 
-## Vista Chat
 
 <img width="1440" alt="ERROR 404" src="https://github.com/ViZacatzi/DEV012-dataverse-chat/assets/145049256/276512e4-f38f-49b7-87d7-817f62bfbc6a">
+Vista Error
 
-## Vista Error
 
 
